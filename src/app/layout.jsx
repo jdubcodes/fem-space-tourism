@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Space Tourism',
-  description: 'Frontend Mentor Space Tourism Website',
+  description: 'Frontend Mentor | Space Tourism Website',
 }
 
 export default function RootLayout({ children }) {

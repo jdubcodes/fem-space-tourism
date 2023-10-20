@@ -1,9 +1,17 @@
-import Image from 'next/image'
+import { Barlow_Condensed } from 'next/font/google'
+import Header from './components/Header'
+
+const barlowCondensed = Barlow_Condensed({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+})
 
 export default function Home() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1>Hello World</h1>
+    <main
+      className={`${barlowCondensed.className} h-screen w-screen bg-[url("/home/background-home-desktop.jpg")] bg-cover`}
+    >
+      <Header />
     </main>
   )
 }
