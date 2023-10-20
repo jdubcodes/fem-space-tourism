@@ -1,8 +1,9 @@
 import Image from 'next/image'
+import { barlowCondensed } from '../fonts'
 
 export default function Header() {
   return (
-    <header className='pt-10 pl-[55px]'>
+    <header className={`${barlowCondensed.className} pt-10 pl-[55px]`}>
       <div className='flex items-center justify-between'>
         <Image
           src='/shared/logo.svg'
