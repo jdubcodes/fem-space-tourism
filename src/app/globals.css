@@ -2,6 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .h1 {
+    font-size: 9.375rem;
+    text-transform: uppercase;
+  }
+
+  .h2 {
+    font-size: 6.25rem;
+    text-transform: uppercase;
+  }
+
+  .h3 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+  }
+
+  .h4 {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+
+  .h5 {
+    font-size: 1.75rem;
+    letter-spacing: 0.29531rem;
+    text-transform: uppercase;
+    color: #d0d6f9;
+  }
+
+  .sub-h1 {
+    font-size: 1.75rem;
+    text-transform: uppercase;
+  }
+
+  .sub-h2 {
+    font-size: 0.875rem;
+    letter-spacing: 0.14763rem;
+    text-transform: uppercase;
+  }
+
+  .nav-text {
+    font-size: 1rem;
+    letter-spacing: 0.16875rem;
+    text-transform: uppercase;
+  }
+
+  .body-text {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: #d0d6f9;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -18,10 +76,4 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
