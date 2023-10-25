@@ -1,4 +1,5 @@
 import './globals.css'
+import Navbar from './components/Navbar'
 
 export const metadata = {
   title: 'Space Tourism',
@@ -7,8 +8,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='en'>
-      <body>{children}</body>
+    <html lang='en' className='w-screen h-screen'>
+      <body className='w-full h-full bg-[url("/home/background-home-desktop.jpg")] bg-cover'>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
