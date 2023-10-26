@@ -4,7 +4,7 @@
 
 @layer utilities {
   .page-container {
-    padding: 3rem 10.45rem 8.2rem;
+    padding: 20vh 10.45rem;
   }
 
   .h1 {
@@ -55,6 +55,12 @@
     font-size: 1.125rem;
     line-height: 2rem;
     color: #d0d6f9;
+  }
+  .nav-bg {
+    width: 57vw;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
   }
 }
 
