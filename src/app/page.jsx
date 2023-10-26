@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import { barlowCondensed, barlow, bellefair } from './fonts'
 
 export default function Home() {
   return (
-    <main className='page-container h-screen absolute top-0'>
+    <main className='page-container h-screen absolute top-0  bg-[url("/home/background-home-desktop.jpg")] bg-cover overflow-hidden'>
       <div className='sticky bottom-0 grid grid-cols-2 h-full w-full place-items-end m-w-6xl'>
         <div className='px-10'>
           <p className={`${barlowCondensed.className} h5`}>
@@ -16,13 +17,14 @@ export default function Home() {
             world experience!
           </p>
         </div>
-
-        <div
-          className={`${bellefair.className} w-[17.125rem] h-[17.125rem] flex justify-center items-center bg-white rounded-full uppercase text-h4 tracking-[0.125rem] text-[#0B0D17] cursor-pointer z-10`}
-        >
-          Explore
-          <span className='absolute w-[17.125rem] h-[17.125rem] opacity-0 bg-white rounded-full hover:opacity-[0.1036] hover:w-[28.125rem] hover:h-[28.125rem] origin-center duration-700 ease-in-out z-[1]'></span>
-        </div>
+        <Link href='/destination'>
+          <div
+            className={`${bellefair.className} w-[17.125rem] h-[17.125rem] flex justify-center items-center bg-white rounded-full uppercase text-h4 tracking-[0.125rem] text-[#0B0D17] cursor-pointer`}
+          >
+            Explore
+            <span className='absolute w-[17.125rem] h-[17.125rem] opacity-0 bg-white rounded-full hover:opacity-[0.1036] hover:w-[28.125rem] hover:h-[28.125rem] origin-center duration-700 ease-in-out'></span>
+          </div>
+        </Link>
       </div>
     </main>
   )
