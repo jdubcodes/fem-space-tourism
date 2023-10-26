@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer utilities {
+  .page-container {
+    padding: 3rem 10.3rem 8.2rem;
+  }
+
   .h1 {
     font-size: 9.375rem;
     text-transform: uppercase;
