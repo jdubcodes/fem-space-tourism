@@ -10,8 +10,6 @@ import menuItems from '../../../config/menuItems'
 export default function Navbar() {
   const pathname = usePathname()
 
-  console.log(pathname)
-
   return (
     <nav
       className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem]`}
@@ -27,8 +25,8 @@ export default function Navbar() {
               <Link
                 href={item.path}
                 className={
-                  pathname == pathname
-                    ? 'active'
+                  pathname == item.path
+                    ? 'pb-9 border-b-[3px] border-white uppercase'
                     : 'pb-9 border-b-[3px] border-hidden border-[#979797] hover:border-solid ease-out uppercase'
                 }
               >
