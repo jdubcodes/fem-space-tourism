@@ -1,10 +1,17 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { barlowCondensed } from '../fonts'
 
 import menuItems from '../../../config/menuItems'
 
 export default function Navbar() {
+  const router = useRouter()
+
+  console.log(router.pathname)
+
   return (
     <nav
       className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem]`}
@@ -15,11 +22,15 @@ export default function Navbar() {
       <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto'>
         <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:inline'></span>
         <ul className='flex gap-14 text-lg z-20'>
-          {menuItems.map((item) => (
-            <li>
+          {menuItems.map((item, index) => (
+            <li key={index}>
               <Link
                 href={item.path}
-                className='pb-9 border-b-[3px] border-hidden border-[#979797] hover:border-solid ease-out uppercase'
+                className={
+                  router.pathname == '/'
+                    ? 'active'
+                    : 'pb-9 border-b-[3px] border-hidden border-[#979797] hover:border-solid ease-out uppercase'
+                }
               >
                 <span className='font-bold mr-2 hidden xl:inline'>
                   {item.number}
