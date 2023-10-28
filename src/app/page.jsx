@@ -3,7 +3,7 @@ import { barlowCondensed, barlow, bellefair } from './fonts'
 
 export default function Home() {
   return (
-    <main className='page-container h-screen w-screen absolute top-0 bg-[url("/home/background-home-desktop.jpg")] bg-cover overflow-hidden'>
+    <main className='page-container h-screen w-screen absolute top-0 bg-[url("/home/background-home-desktop.jpg")] bg-cover bg-center overflow-hidden'>
       <div className='bottom-0 mx-auto grid grid-cols-2 h-full w-full place-items-end max-w-[69.125rem]'>
         <div>
           <p className={`${barlowCondensed.className} h5`}>
