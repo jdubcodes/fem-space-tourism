@@ -2,15 +2,15 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { barlowCondensed } from '../fonts'
 
 import menuItems from '../../../config/menuItems'
 
 export default function Navbar() {
-  const router = useRouter()
+  const pathname = usePathname()
 
-  console.log(router.pathname)
+  console.log(pathname)
 
   return (
     <nav
@@ -27,7 +27,7 @@ export default function Navbar() {
               <Link
                 href={item.path}
                 className={
-                  router.pathname == '/'
+                  pathname == pathname
                     ? 'active'
                     : 'pb-9 border-b-[3px] border-hidden border-[#979797] hover:border-solid ease-out uppercase'
                 }
