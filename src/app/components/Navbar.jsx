@@ -6,7 +6,9 @@ import menuItems from '../../../config/menuItems'
 
 export default function Navbar() {
   return (
-    <nav className={`${barlowCondensed.className} pt-16 px-[10.45rem]`}>
+    <nav
+      className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem]`}
+    >
       <Link href='/' className='z-10 absolute left-[6vw] -translate-y-[12px]'>
         <Image src='/shared/logo.svg' alt='Logo' width={48} height={48} />
       </Link>
@@ -27,7 +29,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className='absolute right-0 w-[75vw] lg:w-[65vw] xl:w-[57vw] nav-bg z-10'></div>
+        <div className='absolute right-0 w-[65vw] lg:w-[60vw] xl:w-[57vw] nav-bg z-10'></div>
       </div>
     </nav>
   )
