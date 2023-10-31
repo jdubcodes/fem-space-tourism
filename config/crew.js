@@ -24,3 +24,5 @@ const crew = [
         path: '/crew/image-anousheh-ansari.webp',
     }
 ]
+
+export default crew
