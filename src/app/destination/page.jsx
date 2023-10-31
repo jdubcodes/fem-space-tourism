@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 import destinations from '../../../config/destinations'
@@ -8,6 +8,24 @@ import { barlowCondensed, barlow, bellefair } from '../fonts'
 
 export default function page() {
   const [dest, setDest] = useState('Moon')
+
+  const destIndex = () => {
+    if (dest === 'Moon') {
+      return 0
+    } else if (dest === 'Mars') {
+      return 1
+    } else if (dest === 'Europa') {
+      return 2
+    }
+    return 3
+  }
+
+  useEffect(() => {
+    destIndex()
+  }, [dest])
+
+  console.log(destIndex())
+  console.log(dest)
 
   return (
     <main className='pt-[25vh] px-[10.45rem] pb-[7rem] h-screen w-screen absolute top-0 bg-[url("/destination/background-destination-desktop.jpg")] bg-cover bg-center overflow-hidden'>
@@ -19,8 +37,8 @@ export default function page() {
           </h3>
           <Image
             className='self-end justify-self-center'
-            src='/destination/image-moon.webp'
-            alt='Moon'
+            src={destinations[destIndex()].path}
+            alt={`${destinations[destIndex()].destination}`}
             width={445}
             height={445}
           />
@@ -46,25 +64,28 @@ export default function page() {
               ))}
             </ul>
           </nav>
-          <h4 className={`${bellefair.className} h2`}>Moon</h4>
+          <h4 className={`${bellefair.className} h2`}>
+            {destinations[destIndex()].destination}
+          </h4>
           <p className={`${barlow.className} self-center body-text text-light`}>
-            See our planet as you’ve never seen it before. A perfect relaxing
-            trip away to help regain perspective and come back refreshed. While
-            you’re there, take in some history by visiting the Luna 2 and Apollo
-            11 landing sites.
+            {destinations[destIndex()].description}
           </p>
           <div className='grid grid-cols-2 pt-6 self-end border-t border-[#383B4B]'>
             <div>
               <p className={`${barlowCondensed.className} sub-h2 text-light`}>
                 Avg. Distance
               </p>
-              <p className={`${bellefair.className} sub-h1`}>384,400 km</p>
+              <p className={`${bellefair.className} sub-h1`}>
+                {destinations[destIndex()].distance}
+              </p>
             </div>
             <div>
               <p className={`${barlowCondensed.className} sub-h2 text-light`}>
                 Est. Travel Time
               </p>
-              <p className={`${bellefair.className} sub-h1`}>3 Days</p>
+              <p className={`${bellefair.className} sub-h1`}>
+                {destinations[destIndex()].time}
+              </p>
             </div>
           </div>
         </div>
