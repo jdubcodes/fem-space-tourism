@@ -34,18 +34,18 @@ export default function page() {
           <h3 className={`${barlowCondensed.className} h5`}>
             <span className='opacity-25 mr-4'>02</span>Meet Your Crew
           </h3>
-          <div className='flex flex-col gap-8 my-auto'>
+          <div className='flex flex-col mb-auto pt-36'>
             <h4 className={`${bellefair.className} h4 opacity-50`}>
               {crew[crewIndex()].title}
             </h4>
-            <h4 className={`${bellefair.className} h3`}>
+            <h4 className={`${bellefair.className} h3 whitespace-nowrap pb-8`}>
               {crew[crewIndex()].name}
             </h4>
             <p className={`${barlow.className} body-text`}>
               {crew[crewIndex()].desc}
             </p>
             {/* Add menu buttons */}
-            <div className='flex gap-6'>
+            <div className='flex gap-6 fixed bottom-28'>
               {crew.map((crew, index) => (
                 <button
                   key={index}
