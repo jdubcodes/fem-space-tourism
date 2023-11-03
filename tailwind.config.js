@@ -43,6 +43,14 @@ module.exports = {
       screens: {
         '3xl': '1921px',
       },
+      padding: {
+        'main-mobile': '8rem 3rem 7rem',
+        'main-tablet': '12.625rem 9.938rem 7.625rem',
+        'main-desktop': '25vh 10.45rem',
+      },
+      opacity: {
+        btn: '0.1036',
+      },
     },
   },
   plugins: [],
