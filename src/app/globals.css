@@ -3,13 +3,96 @@
 @tailwind utilities;
 
 @layer utilities {
-  .page-container {
-    padding: 25vh 10.45rem;
+  .text-lg-accent-desktop {
+    font-size: 9.375rem;
+    line-height: normal;
   }
 
-  .h1 {
-    font-size: 9.375rem;
+  .text-lg-accent-mobile {
+    font-size: 5rem;
+    line-height: 6.25rem;
     text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .text-sm-accent-desktop {
+    font-size: 1.75rem;
+    letter-spacing: 0.29531rem;
+  }
+
+  .text-sm-accent-tablet {
+    font-size: 1.25rem;
+    letter-spacing: 0.21094rem;
+  }
+
+  .text-sm-accent-mobile {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.16875rem;
+    text-transform: uppercase;
+    color: #d0d6f9;
+  }
+
+  .text-body-desktop {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+
+  .text-body-tablet {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .text-body-mobile {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5625rem;
+    color: #d0d6f9;
+  }
+
+  .btn-desktop {
+    width: 17.125rem;
+    height: 17.125rem;
+  }
+
+  .btn-tablet {
+    width: 15.125rem;
+    height: 15.125rem;
+    font-size: 2rem;
+    letter-spacing: 0.125rem;
+  }
+
+  .btn-mobile {
+    width: 9.375rem;
+    height: 9.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 0.07813rem;
+    color: #0b0d17;
+    cursor: pointer;
+    z-index: 20;
+  }
+
+  .btn-hover-desktop {
+    width: 28.125rem;
+    height: 28.125rem;
+  }
+
+  .btn-hover-tablet {
+    width: 23.84rem;
+    height: 23.84rem;
+  }
+
+  .btn-hover-mobile {
+    width: 15.4rem;
+    height: 15.4rem;
   }
 
   .h2 {
