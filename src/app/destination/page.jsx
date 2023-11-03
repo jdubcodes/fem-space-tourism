@@ -2,23 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-
 import destinations from '../../../config/destinations'
+import { destIndex } from '../../../config/findIndex'
 import { barlowCondensed, barlow, bellefair } from '../fonts'
 
 export default function page() {
   const [dest, setDest] = useState('Moon')
-
-  const destIndex = () => {
-    if (dest === 'Moon') {
-      return 0
-    } else if (dest === 'Mars') {
-      return 1
-    } else if (dest === 'Europa') {
-      return 2
-    }
-    return 3
-  }
 
   useEffect(() => {
     destIndex()
@@ -62,10 +51,10 @@ export default function page() {
             </ul>
           </nav>
           <h4 className={`${bellefair.className} h2`}>
-            {destinations[destIndex()].destination}
+            {destinations[destIndex(dest)].destination}
           </h4>
           <p className={`${barlow.className} self-center body-text text-light`}>
-            {destinations[destIndex()].description}
+            {destinations[destIndex(dest)].description}
           </p>
           <div className='grid grid-cols-2 pt-6 self-end border-t border-[#383B4B]'>
             <div>
@@ -73,7 +62,7 @@ export default function page() {
                 Avg. Distance
               </p>
               <p className={`${bellefair.className} sub-h1`}>
-                {destinations[destIndex()].distance}
+                {destinations[destIndex(dest)].distance}
               </p>
             </div>
             <div>
@@ -81,7 +70,7 @@ export default function page() {
                 Est. Travel Time
               </p>
               <p className={`${bellefair.className} sub-h1`}>
-                {destinations[destIndex()].time}
+                {destinations[destIndex(dest)].time}
               </p>
             </div>
           </div>

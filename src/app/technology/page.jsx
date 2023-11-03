@@ -3,24 +3,15 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import technology from '../../../config/technology'
-
+import { techIndex } from '../../../config/findIndex'
 import { barlowCondensed, barlow, bellefair } from '../fonts'
 
 export default function page() {
   const [number, setNumber] = useState('1')
 
   useEffect(() => {
-    selected()
+    techIndex()
   }, [number])
-
-  const selected = () => {
-    if (number === '1') {
-      return 0
-    } else if (number === '2') {
-      return 1
-    }
-    return 2
-  }
 
   return (
     <main className='pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden'>
@@ -52,17 +43,17 @@ export default function page() {
               The terminology...
             </span>
             <h4 className={`${bellefair.className} h3 mb-4`}>
-              {technology[selected()].tech}
+              {technology[techIndex(number)].tech}
             </h4>
             <p className={`${barlow.className} body-text`}>
-              {technology[selected()].desc}
+              {technology[techIndex(number)].desc}
             </p>
           </div>
         </div>
       </div>
       <Image
-        src={technology[selected()].pathPortrait}
-        alt={technology[selected()].tech}
+        src={technology[techIndex(number)].pathPortrait}
+        alt={technology[techIndex(number)].tech}
         width={515}
         height={527}
         className='absolute bottom-28 right-0'

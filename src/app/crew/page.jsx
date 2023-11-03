@@ -3,22 +3,11 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import crew from '../../../config/crew.js'
-
+import { crewIndex } from '../../../config/findIndex.js'
 import { barlowCondensed, barlow, bellefair } from '../fonts'
 
 export default function page() {
   const [member, setMember] = useState('Douglas Hurley')
-
-  const crewIndex = () => {
-    if (member === 'Douglas Hurley') {
-      return 0
-    } else if (member === 'Mark Shuttleworth') {
-      return 1
-    } else if (member === 'Victor Glover') {
-      return 2
-    }
-    return 3
-  }
 
   useEffect(() => {
     crewIndex()
@@ -34,13 +23,13 @@ export default function page() {
           </h3>
           <div className='flex flex-col mb-auto pt-36 h-[486px]'>
             <h4 className={`${bellefair.className} h4 opacity-50`}>
-              {crew[crewIndex()].title}
+              {crew[crewIndex(member)].title}
             </h4>
             <h4 className={`${bellefair.className} h3 whitespace-nowrap pb-8`}>
-              {crew[crewIndex()].name}
+              {crew[crewIndex(member)].name}
             </h4>
             <p className={`${barlow.className} body-text`}>
-              {crew[crewIndex()].desc}
+              {crew[crewIndex(member)].desc}
             </p>
             {/* Add menu buttons */}
             <div className='flex gap-6 mt-auto relative -bottom-6'>
@@ -60,8 +49,8 @@ export default function page() {
         </div>
         {/* Right side */}
         <Image
-          src={crew[crewIndex()].path}
-          alt={crew[crewIndex()].name}
+          src={crew[crewIndex(member)].path}
+          alt={crew[crewIndex(member)].name}
           width={800}
           height={800}
           className='pl-10 self-end relative bottom-0 right-0 overflow-hidden'
