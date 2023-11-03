@@ -6,7 +6,6 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    screens: {},
     colors: {
       dark: '#0B0D17',
       light: '#D0D6F9',
@@ -37,6 +36,12 @@ module.exports = {
         'tech-desktop': 'url("/technology/background-technology-desktop.jpg")',
         'tech-tablet': 'url("/technology/background-technology-tablet.jpg")',
         'tech-mobile': 'url("/technology/background-technology-mobile.jpg")',
+        'home-desktop': 'url("/home/background-home-desktop.jpg")',
+        'home-tablet': 'url("/home/background-home-tablet.jpg")',
+        'home-mobile': 'url("/home/background-home-mobile.jpg")',
+      },
+      screens: {
+        '3xl': '1921px',
       },
     },
   },
