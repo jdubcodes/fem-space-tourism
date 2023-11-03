@@ -1,4 +1,4 @@
-export const crewIndex = () => {
+export const crewIndex = (member) => {
   if (member === 'Douglas Hurley') {
     return 0
   } else if (member === 'Mark Shuttleworth') {
@@ -9,7 +9,7 @@ export const crewIndex = () => {
   return 3
 }
 
-export const destIndex = () => {
+export const destIndex = (dest) => {
   if (dest === 'Moon') {
     return 0
   } else if (dest === 'Mars') {
@@ -20,7 +20,7 @@ export const destIndex = () => {
   return 3
 }
 
-export const techIndex = () => {
+export const techIndex = (number) => {
   if (number === '1') {
     return 0
   } else if (number === '2') {
