@@ -6,6 +6,7 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {},
     colors: {
       dark: '#0B0D17',
       light: '#D0D6F9',
@@ -26,6 +27,16 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
+        'crew-tablet': 'url("/crew/background-crew-tablet.jpg")',
+        'crew-mobile': 'url("/crew/background-crew-mobile.jpg")',
+        'dest-desktop':
+          'url("/destination/background-destination-desktop.jpg")',
+        'dest-tablet': 'url("/destination/background-destination-tablet.jpg")',
+        'dest-mobile': 'url("/destination/background-destination-mobile.jpg")',
+        'tech-desktop': 'url("/technology/background-technology-desktop.jpg")',
+        'tech-tablet': 'url("/technology/background-technology-tablet.jpg")',
+        'tech-mobile': 'url("/technology/background-technology-mobile.jpg")',
       },
     },
   },
