@@ -25,7 +25,7 @@ export default function page() {
   }, [dest])
 
   return (
-    <main className='pt-[25vh] px-[10.45rem] pb-[7rem] h-screen w-screen absolute top-0 bg-[url("/destination/background-destination-desktop.jpg")] bg-cover bg-center overflow-hidden'>
+    <main className='pt-[25vh] px-[10.45rem] pb-[7rem] h-screen w-screen absolute top-0 bg-dest-desktop bg-cover bg-center overflow-hidden'>
       <div className='bottom-0 h-full max-h-[37.5rem] w-full max-w-[69.125rem] mx-auto grid grid-cols-1  place-items-start gap-10 text-center lg:gap-0 lg:grid-cols-2 lg:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>

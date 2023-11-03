@@ -3,9 +3,9 @@ import { barlowCondensed, barlow, bellefair } from './fonts'
 
 export default function Home() {
   return (
-    <main className='py-[18vh] px-[8rem] lg:page-container h-screen w-screen absolute top-0 bg-[url("/home/background-home-desktop.jpg")] bg-cover bg-center overflow-hidden'>
-      <div className='bottom-0 h-full w-full max-w-[69.125rem] mx-auto grid grid-cols-1 lg:grid-cols-2 place-items-center lg:place-items-end gap-10 lg:gap-0 text-center lg:text-left'>
-        <div>
+    <main className='py-[18vh] px-[8rem] lg:page-container h-screen w-screen absolute top-0 bg-home-desktop bg-cover bg-center overflow-hidden'>
+      <div className='bottom-0 h-full w-full max-w-[69.125rem] mx-auto grid grid-cols-1 place-items-center lg:grid-cols-2 lg:place-items-end gap-10 lg:gap-0 text-center lg:text-left'>
+        <div className='pr-20'>
           <p className={`${barlowCondensed.className} h5 text-light`}>
             So, you want to travel to
           </p>

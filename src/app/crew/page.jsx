@@ -25,7 +25,7 @@ export default function page() {
   }, [member])
 
   return (
-    <main className='pt-[25vh] px-[10.45rem] h-screen w-screen absolute top-0 bg-[url("/crew/background-crew-desktop.jpg")] bg-cover bg-center overflow-hidden'>
+    <main className='pt-[25vh] px-[10.45rem] h-screen w-screen absolute top-0 bg-crew-desktop bg-cover bg-center overflow-hidden'>
       <div className='bottom-0 h-full max-h-[700px] w-full max-w-[69.125rem] mx-auto grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0 text-center lg:text-left'>
         {/* Left side */}
         <div className='flex flex-col w-full h-full pr-10'>

@@ -23,7 +23,7 @@ export default function page() {
   }
 
   return (
-    <main className='pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-[url("/technology/background-technology-desktop.jpg")] bg-cover overflow-hidden'>
+    <main className='pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden'>
       <div className='bottom-0 h-full w-full'>
         <h3 className={`${barlowCondensed.className} h5`}>
           <span className='opacity-25 mr-4'>03</span>Space launch 101
