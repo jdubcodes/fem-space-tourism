@@ -35,17 +35,17 @@
     color: #d0d6f9;
   }
 
-  .text-body-desktop {
+  .text-para-desktop {
     font-size: 1.125rem;
     line-height: 2rem;
   }
 
-  .text-body-tablet {
+  .text-para-tablet {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 
-  .text-body-mobile {
+  .text-para-mobile {
     font-size: 0.9375rem;
     font-style: normal;
     font-weight: 400;
@@ -95,7 +95,50 @@
     height: 15.4rem;
   }
 
-  .h2 {
+  .text-desc-desktop {
+    font-size: 1.75rem;
+    letter-spacing: 0.29531rem;
+  }
+
+  .text-desc-tablet {
+    font-size: 1.25rem;
+    letter-spacing: 0.21094rem;
+  }
+
+  .text-desc-mobile {
+    font-size: 1rem;
+    letter-spacing: 0.16875rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .text-nav2-tablet {
+    font-size: 1rem;
+    letter-spacing: 0.16875rem;
+  }
+
+  .text-nav2-mobile {
+    font-size: 0.875rem;
+    letter-spacing: 0.14763rem;
+    text-transform: uppercase;
+    color: #d0d6f9;
+  }
+
+  .text-accent2-desktop {
+    font-size: 6.25rem;
+  }
+
+  .text-accent2-tablet {
+    font-size: 5rem;
+  }
+
+  .text-accent2-mobile {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .text .h2 {
     font-size: 6.25rem;
     text-transform: uppercase;
   }
