@@ -3,26 +3,37 @@ import { barlowCondensed, barlow, bellefair } from './fonts'
 
 export default function Home() {
   return (
-    <main className='py-[18vh] px-[8rem] lg:page-container h-screen w-screen absolute top-0 bg-home-desktop bg-cover bg-center overflow-hidden'>
-      <div className='bottom-0 h-full w-full max-w-[69.125rem] mx-auto grid grid-cols-1 place-items-center lg:grid-cols-2 lg:place-items-end gap-10 lg:gap-0 text-center lg:text-left'>
-        <div className='pr-20'>
-          <p className={`${barlowCondensed.className} h5 text-light`}>
+    <main className='p-main-mobile sm:p-main-tablet lg:p-main-desktop h-screen w-screen absolute top-0 bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center overflow-hidden'>
+      <div className='mx-auto h-full w-full max-w-[69.125rem] grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
+        <div className='self-end xl:pr-20'>
+          <p
+            className={`${barlowCondensed.className} text-sm-accent-mobile md:text-sm-accent-tablet lg:text-sm-accent-desktop`}
+          >
             So, you want to travel to
           </p>
-          <span className={`${bellefair.className} h1`}>Space</span>
-          <p className={`${barlow.className} body-text`}>
+          <span
+            className={`${bellefair.className} text-lg-accent-mobile md:text-lg-accent-desktop`}
+          >
+            Space
+          </span>
+          <p
+            className={`${barlow.className} text-body-mobile md:text-body-tablet lg:text-body-desktop`}
+          >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
             Well sit back, and relax because we’ll give you a truly out of this
             world experience!
           </p>
         </div>
-        <Link href='/destination'>
+        <Link
+          href='/destination'
+          className='justify-self-center self-end xl:justify-self-end'
+        >
           <div
-            className={`${bellefair.className} w-[17.125rem] h-[17.125rem] flex justify-center items-center bg-white rounded-full uppercase text-h4 tracking-[0.125rem] text-[#0B0D17] cursor-pointer z-20`}
+            className={`${bellefair.className} btn-mobile md:btn-tablet lg:btn-desktop bg-white rounded-full`}
           >
             Explore
-            <span className='absolute w-[17.125rem] h-[17.125rem] opacity-0 bg-white rounded-full hover:opacity-[0.1036] hover:w-[28.125rem] hover:h-[28.125rem] origin-center duration-700 ease-in-out'></span>
+            <span className='absolute btn-mobile md:btn-tablet lg:btn-desktop opacity-0 bg-white rounded-full hover:btn-hover-mobile md:hover:btn-hover-tablet lg:hover:btn-hover-desktop hover:opacity-btn duration-700 origin-center ease-in-out'></span>
           </div>
         </Link>
       </div>
