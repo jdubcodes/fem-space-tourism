@@ -138,6 +138,21 @@
     color: #ffffff;
   }
 
+  .dest-img-desktop {
+    width: 27.8125rem;
+    height: 27.8125rem;
+  }
+
+  .dest-img-tablet {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+
+  .dest-img-mobile {
+    width: 10.625rem;
+    height: 10.625rem;
+  }
+
   .text .h2 {
     font-size: 6.25rem;
     text-transform: uppercase;
