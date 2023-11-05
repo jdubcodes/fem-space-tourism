@@ -23,9 +23,6 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
         'crew-tablet': 'url("/crew/background-crew-tablet.jpg")',
         'crew-mobile': 'url("/crew/background-crew-mobile.jpg")',
@@ -47,8 +44,8 @@ module.exports = {
         'main-mobile': '8rem 3rem 7rem',
         'main-tablet': '12.625rem 9.938rem 7.625rem',
         'main-desktop': '25vh 10.45rem',
-        'dest-mobile': '5.56rem 4.5rem 4rem',
-        'dest-tablet': '8.875rem 6.875rem 2.4375rem 4.375rem',
+        'dest-mobile': '6.25rem 3.5rem 4rem',
+        'dest-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
         'dest-desktop': '25vh 10.45rem 7rem',
       },
       opacity: {
