@@ -12,14 +12,17 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem]`}
+      className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem] absolute`}
     >
-      <Link href='/' className='z-10 absolute left-[6vw] -translate-y-[12px]'>
+      <Link
+        href='/'
+        className='z-10 absolute w-10 h-10 md:w-12 md:h-12 left-6 top-6 md:left-[6vw] md:translate-y-[28px]'
+      >
         <Image src='/shared/logo.svg' alt='Logo' width={48} height={48} />
       </Link>
       <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto'>
         <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:inline'></span>
-        <ul className='flex gap-14 text-lg z-20'>
+        <ul className='hidden md:flex gap-14 text-lg z-20'>
           {menuItems.map((item, index) => (
             <li key={index}>
               <Link
@@ -38,7 +41,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <div className='absolute right-0 w-[65vw] lg:w-[60vw] xl:w-[57vw] nav-bg z-10'></div>
+        <div className='hidden absolute right-0 w-[65vw] lg:w-[60vw] xl:w-[57vw] nav-bg z-10 md:inline-block'></div>
       </div>
     </nav>
   )
