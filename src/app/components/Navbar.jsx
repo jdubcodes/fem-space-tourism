@@ -3,12 +3,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 import { barlowCondensed } from '../fonts'
 
 import menuItems from '../../../config/menuItems'
 
 export default function Navbar() {
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleClick = () => {
+    setIsOpen(!isOpen)
+  }
 
   return (
     <nav
@@ -20,8 +26,8 @@ export default function Navbar() {
       >
         <Image src='/shared/logo.svg' alt='Logo' width={48} height={48} />
       </Link>
-      <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto'>
-        <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:inline'></span>
+      <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto hidden'>
+        <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:hidden'></span>
         <ul className='hidden md:flex gap-14 text-lg z-20'>
           {menuItems.map((item, index) => (
             <li key={index}>
@@ -43,6 +49,30 @@ export default function Navbar() {
         </ul>
         <div className='hidden absolute right-0 w-[65vw] lg:w-[60vw] xl:w-[57vw] nav-bg z-10 md:inline-block'></div>
       </div>
+
+      <button
+        onClick={handleClick}
+        className='flex flex-col justify-center items-center'
+      >
+        <span
+          className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isOpen ? 'rotate-45 translate-y-1' : '-translate-y-0.5'
+                    }`}
+        ></span>
+        <span
+          className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm my-0.5 ${
+                      isOpen ? 'opacity-0' : 'opacity-100'
+                    }`}
+        ></span>
+        <span
+          className={`bg-white block transition-all duration-300 ease-out 
+                    h-0.5 w-6 rounded-sm ${
+                      isOpen ? '-rotate-45 -translate-y-1' : 'translate-y-0.5'
+                    }`}
+        ></span>
+      </button>
     </nav>
   )
 }
