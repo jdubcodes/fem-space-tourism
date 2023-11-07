@@ -20,7 +20,7 @@ export default function Navbar() {
     <header>
       <Link
         href='/'
-        className='z-10 absolute w-10 h-10 md:w-12 md:h-12 left-6 top-6 md:left-[6vw] md:translate-y-[28px]'
+        className='z-10 absolute w-10 h-10 left-6 top-6 md:w-12 md:h-12 md:left-[6vw] md:translate-y-[28px]'
       >
         <Image src='/shared/logo.svg' alt='Logo' width={48} height={48} />
       </Link>
@@ -52,36 +52,39 @@ export default function Navbar() {
             ></span>
           </button>
           {/* background */}
-          {isOpen ? (
-            <div className='w-[52vw] h-screen absolute top-0 right-0 nav-bg'>
-              <nav className='pt-28'>
-                <ul
-                  className={`${barlowCondensed.className} flex flex-col gap-8 nav-text z-20`}
-                >
-                  {menuItems.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.path}
-                        // onClick={setIsOpen(!isOpen)}
-                        className='pb-9 uppercase'
-                      >
-                        <span className='font-bold mr-2'>{item.number}</span>
-                        {item.text}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </div>
-          ) : (
-            ''
-          )}
+          <div
+            className={
+              isOpen
+                ? 'w-[52vw] h-screen absolute top-0 right-0 nav-bg origin-right duration-300 tristion-all'
+                : 'hidden'
+            }
+          >
+            {/* desktop menu */}
+            <nav className='pt-28'>
+              <ul
+                className={`${barlowCondensed.className} flex flex-col gap-8 nav-text z-20`}
+              >
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.path}
+                      onClick={handleClick}
+                      className='pb-9 uppercase'
+                    >
+                      <span className='font-bold mr-2'>{item.number}</span>
+                      {item.text}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
       <nav
         className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem] absolute`}
       >
-        <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto hidden'>
+        <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto'>
           <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:hidden'></span>
           <ul className='hidden md:flex gap-14 text-lg z-20'>
             {menuItems.map((item, index) => (
