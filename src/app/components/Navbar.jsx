@@ -30,10 +30,10 @@ export default function Navbar() {
         <div className='md:hidden'>
           <button
             onClick={handleClick}
-            className='flex flex-col justify-center items-center absolute right-10 top-5 z-50'
+            className='flex flex-col justify-center items-center absolute right-10 top-10 z-50'
           >
             <span
-              className={`bg-light block transition-all duration-200 ease-out 
+              className={`bg-light block transition-all duration-300 ease-out 
                     h-0.5 w-6 rounded-sm ${
                       isOpen ? 'rotate-45 translate-y-1.5' : '-translate-y-0.5'
                     }`}
@@ -53,12 +53,18 @@ export default function Navbar() {
           </button>
           {/* background */}
           {isOpen ? (
-            <div className='w-64 h-screen absolute top-0 right-0 nav-bg'>
-              <nav>
-                <ul className='flex flex-col gap-14 text-lg z-20'>
+            <div className='w-[52vw] h-screen absolute top-0 right-0 nav-bg'>
+              <nav className='pt-28'>
+                <ul
+                  className={`${barlowCondensed.className} flex flex-col gap-8 nav-text z-20`}
+                >
                   {menuItems.map((item, index) => (
                     <li key={index}>
-                      <Link href={item.path} className='pb-9 uppercase'>
+                      <Link
+                        href={item.path}
+                        // onClick={setIsOpen(!isOpen)}
+                        className='pb-9 uppercase'
+                      >
                         <span className='font-bold mr-2'>{item.number}</span>
                         {item.text}
                       </Link>
