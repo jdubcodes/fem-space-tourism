@@ -11,16 +11,6 @@ module.exports = {
       light: '#D0D6F9',
       white: '#FFFFFF',
     },
-    fontSize: {
-      h1: '9.375rem',
-      h2: '6.25rem',
-      h3: '3.5rem',
-      h4: '2rem',
-      sub1: '1.75rem',
-      sub2: '0.875rem',
-      nav: '1rem',
-      base: '1.125rem',
-    },
     extend: {
       backgroundImage: {
         'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
