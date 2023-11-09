@@ -14,6 +14,7 @@ module.exports = {
     extend: {
       maxWidth: {
         container: '69.125rem',
+        screen: '100vw',
       },
       backgroundImage: {
         'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
