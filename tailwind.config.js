@@ -34,9 +34,9 @@ module.exports = {
         '3xl': '1921px',
       },
       padding: {
-        'main-mobile': '8rem 3rem 7rem',
-        'main-tablet': '12.625rem 9.938rem 7.625rem',
-        'main-desktop': '25vh 10.45rem',
+        'home-mobile': '8rem 3rem 7rem',
+        'home-tablet': '12.625rem 9.938rem 7.625rem',
+        'home-desktop': '25vh 10.45rem',
         'dest-mobile': '6.25rem 3.5rem 4rem',
         'dest-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
         'dest-desktop': '25vh 10.45rem 7rem',
