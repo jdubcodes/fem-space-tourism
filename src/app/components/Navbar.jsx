@@ -84,7 +84,7 @@ export default function Navbar() {
       <nav
         className={`${barlowCondensed.className} pt-16 px-[3rem] md:px-[6rem] lg:px-[10.45rem] absolute`}
       >
-        <div className='flex items-center justify-end xl:justify-between max-w-[69.125rem] mx-auto'>
+        <div className='flex items-center justify-end xl:justify-between max-w-container mx-auto'>
           <span className='left-0 w-[478px] h-[0.0625rem] bg-white opacity-[0.2515] z-20 hidden xl:hidden'></span>
           <ul className='hidden md:flex gap-14 text-lg z-20'>
             {menuItems.map((item, index) => (
