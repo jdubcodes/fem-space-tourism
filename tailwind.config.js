@@ -12,6 +12,9 @@ module.exports = {
       white: '#FFFFFF',
     },
     extend: {
+      maxWidth: {
+        container: '69.125rem',
+      },
       backgroundImage: {
         'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
         'crew-tablet': 'url("/crew/background-crew-tablet.jpg")',
