@@ -15,7 +15,7 @@ export default function page() {
 
   return (
     <main className='min-h-screen p-dest-mobile md:p-dest-tablet xl:p-dest-desktop bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop bg-cover bg-center flex itmes-center'>
-      <div className='m-auto w-full max-w-[69.125rem] grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
+      <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>
           <h3
