@@ -3,8 +3,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useRef, useLayoutEffect } from 'react'
 import { barlowCondensed } from '../fonts'
+
+import { gsap } from 'gsap'
 
 import menuItems from '../../../config/menuItems'
 
@@ -12,7 +14,19 @@ export default function Navbar() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
 
+  const navRef = useRef()
+  const tl = useRef()
+
+  useLayoutEffect(() => {
+    const ctx = gsap.context((self) => {
+      const nav = self.selector(navRef.current)
+      tl.current = gsap.timeline().to(nav, { x: 0 }).reverse()
+    }, navRef) // <- Scope!
+    return () => ctx.revert() // <- Cleanup!
+  }, [])
+
   const handleClick = () => {
+    tl.current.reversed(!tl.current.reversed())
     setIsOpen(!isOpen)
   }
 
@@ -53,11 +67,8 @@ export default function Navbar() {
           </button>
           {/* background */}
           <div
-            className={
-              isOpen
-                ? 'w-[52vw] h-screen absolute top-0 right-0 nav-bg origin-right duration-300 tristion-all'
-                : 'hidden'
-            }
+            className='h-screen p-10 nav-bg translate-x-60 fixed right-0'
+            ref={navRef}
           >
             {/* desktop menu */}
             <nav className='pt-28'>
@@ -69,7 +80,7 @@ export default function Navbar() {
                     <Link
                       href={item.path}
                       onClick={handleClick}
-                      className='pb-9 uppercase'
+                      className='hover:text-light'
                     >
                       <span className='font-bold mr-2'>{item.number}</span>
                       {item.text}
