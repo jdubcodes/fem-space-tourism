@@ -3,24 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-para-desktop {
-    font-size: 1.125rem;
-    line-height: 2rem;
-  }
-
-  .text-para-tablet {
-    font-size: 1rem;
-    line-height: 1.75rem;
-  }
-
-  .text-para-mobile {
-    font-size: 0.9375rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.5625rem;
-    color: #d0d6f9;
-  }
-
   .btn-desktop {
     width: 17.125rem;
     height: 17.125rem;
@@ -133,12 +115,6 @@
     font-size: 1rem;
     text-transform: uppercase;
     color: #ffffff;
-  }
-
-  .name-text-desktop {
-  }
-
-  .name-text-tablet {
   }
 
   .name-text-mobile {
