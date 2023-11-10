@@ -23,7 +23,15 @@ module.exports = {
         'crew-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
         'crew-desktop': '25vh 10.45rem 7rem',
       },
+      width: {
+        'nav-line': '29.875rem',
+      },
+      height: {
+        'nav-line': '0.0625rem',
+      },
       maxWidth: {
+        'line-tablet': '28vw',
+        'line-desktop': '28.875rem',
         container: '69.125rem',
         screen: '100vw',
       },
@@ -52,6 +60,12 @@ module.exports = {
         '2.5rem': '2.5rem',
         '3rem': '3rem',
         '3.5rem': '3.5rem',
+        nav: [
+          '1rem',
+          {
+            letterSpacing: '0.16875rem',
+          },
+        ],
         'accent1-mobile': [
           '5rem',
           {
@@ -102,6 +116,7 @@ module.exports = {
         ],
       },
       opacity: {
+        line: '0.2515',
         btn: '0.1036',
       },
     },
