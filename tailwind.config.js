@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       padding: {
-        'home-mobile': '8rem 3rem 7rem',
+        'home-mobile': '8rem 3rem 8rem',
         'home-tablet': '12.625rem 9.938rem 7.625rem',
         'home-desktop': '25vh 10.45rem',
         'dest-mobile': '6.25rem 3.5rem 4rem',
