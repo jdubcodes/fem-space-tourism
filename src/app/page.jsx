@@ -7,17 +7,17 @@ export default function Home() {
       className={`${barlowCondensed.className} p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
     >
       <div className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
-        <div className='flex flex-col gap-2 self-end xl:pr-20'>
-          <p className='text-sm-accent-mobile md:text-sm-accent-tablet lg:text-sm-accent-desktop'>
+        <div className='flex flex-col gap-2 self-end sm:gap-4 md:self-center xl:self-end xl:pr-20'>
+          <p className='text-sub-mobile sm:text-sub-tablet lg:text-sub-desktop text-light uppercase'>
             So, you want to travel to
           </p>
           <span
-            className={`${bellefair.className} text-lg-accent-mobile md:text-lg-accent-desktop`}
+            className={`${bellefair.className} text-accent1-mobile sm:text-[6.75rem] md:text-accent1-tablet text-white uppercase`}
           >
             Space
           </span>
           <p
-            className={`${barlow.className} text-para-mobile md:text-para-tablet lg:text-para-desktop`}
+            className={`${barlow.className} max-w-md md:max-w-xl self-center text-para-mobile sm:text-para-tablet lg:text-para-desktop`}
           >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
@@ -27,13 +27,13 @@ export default function Home() {
         </div>
         <Link
           href='/destination'
-          className='justify-self-center self-end xl:justify-self-end'
+          className='justify-self-center self-end md:self-center xl:justify-self-end xl:self-end'
         >
           <div
-            className={`${bellefair.className} btn-mobile md:btn-tablet lg:btn-desktop bg-white rounded-full`}
+            className={`${bellefair.className} btn-mobile md:btn-tablet xl:btn-desktop bg-white rounded-full`}
           >
             Explore
-            <span className='absolute btn-mobile md:btn-tablet lg:btn-desktop opacity-0 bg-white rounded-full hover:btn-hover-mobile md:hover:btn-hover-tablet lg:hover:btn-hover-desktop hover:opacity-btn duration-700 origin-center ease-in-out'></span>
+            <span className='absolute btn-mobile md:btn-tablet xl:btn-desktop opacity-0 bg-white rounded-full hover:btn-hover-mobile md:hover:btn-hover-tablet xl:hover:btn-hover-desktop hover:opacity-btn duration-700 origin-center ease-in-out'></span>
           </div>
         </Link>
       </div>
