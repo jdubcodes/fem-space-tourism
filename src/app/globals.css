@@ -3,38 +3,6 @@
 @tailwind utilities;
 
 @layer utilities {
-  .text-lg-accent-desktop {
-    font-size: 9.375rem;
-    line-height: normal;
-  }
-
-  .text-lg-accent-mobile {
-    font-size: 5rem;
-    line-height: 6.25rem;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  .text-sm-accent-desktop {
-    font-size: 1.75rem;
-    letter-spacing: 0.29531rem;
-  }
-
-  .text-sm-accent-tablet {
-    font-size: 1.25rem;
-    letter-spacing: 0.21094rem;
-  }
-
-  .text-sm-accent-mobile {
-    font-size: 1rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    letter-spacing: 0.16875rem;
-    text-transform: uppercase;
-    color: #d0d6f9;
-  }
-
   .text-para-desktop {
     font-size: 1.125rem;
     line-height: 2rem;
@@ -153,25 +121,30 @@
     height: 10.625rem;
   }
 
-  .text .h2 {
-    font-size: 6.25rem;
-    text-transform: uppercase;
-  }
-
-  .h3 {
-    font-size: 3.5rem;
-    text-transform: uppercase;
-  }
-
-  .h4 {
+  .title-text-desktop {
     font-size: 2rem;
-    text-transform: uppercase;
   }
 
-  .h5 {
-    font-size: 1.75rem;
-    letter-spacing: 0.29531rem;
+  .title-text-tablet {
+    font-size: 1.5rem;
+  }
+
+  .title-text-mobile {
+    font-size: 1rem;
     text-transform: uppercase;
+    color: #ffffff;
+  }
+
+  .name-text-desktop {
+  }
+
+  .name-text-tablet {
+  }
+
+  .name-text-mobile {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
   }
 
   .sub-h1 {
