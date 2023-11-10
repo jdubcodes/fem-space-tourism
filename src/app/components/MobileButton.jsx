@@ -2,7 +2,7 @@ export default function MobileButton({ handleClick, isOpen }) {
   return (
     <button
       onClick={handleClick}
-      className='flex flex-col justify-center items-center absolute right-10 top-10 z-50'
+      className='flex flex-col justify-center items-center absolute right-9 top-[2.85rem] z-50'
     >
       <span
         className={`bg-light block transition-all duration-300 ease-out 
