@@ -14,21 +14,29 @@ export default function page() {
   }, [member])
 
   return (
-    <main className='pt-[25vh] px-[10.45rem] h-screen w-screen absolute top-0 bg-crew-desktop bg-cover bg-center overflow-hidden'>
-      <div className='bottom-0 h-full max-h-[700px] w-full max-w-container mx-auto grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0 text-center lg:text-left'>
+    <main
+      className={`${barlowCondensed.className} min-h-screen p-crew-mobile md:p-crew-tablet xl:p-crew-desktop bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop bg-cover bg-center`}
+    >
+      <div className='h-full max-h-[700px] w-full max-w-container mx-auto grid grid-cols-1 grid-rows-3 gap-10 lg:grid-rows-1 lg:grid-cols-2 lg:gap-0 text-center lg:text-left'>
         {/* Left side */}
-        <div className='flex flex-col w-full h-full pr-10'>
-          <h3 className={`${barlowCondensed.className} h5`}>
+        <div className='flex flex-col w-full h-full lg:pr-10'>
+          <h3 className='text-desc-mobile md:text-desc-tablet lg:text-desc-desktop'>
             <span className='opacity-25 mr-4'>02</span>Meet Your Crew
           </h3>
-          <div className='flex flex-col mb-auto pt-36 h-[486px]'>
-            <h4 className={`${bellefair.className} h4 opacity-50`}>
+          <div className='flex flex-col mb-auto pt-36 h-[486px] row-start-3'>
+            <h4
+              className={`${bellefair.className} text-1rem md:text-1.5rem lg:text-2rem uppercase opacity-50`}
+            >
               {crew[crewIndex(member)].title}
             </h4>
-            <h4 className={`${bellefair.className} h3 whitespace-nowrap pb-8`}>
+            <h4
+              className={`${bellefair.className} pb-8 text-1.5rem md:text-2.5rem lg:text-3.5rem uppercase whitespace-nowrap`}
+            >
               {crew[crewIndex(member)].name}
             </h4>
-            <p className={`${barlow.className} body-text`}>
+            <p
+              className={`${barlow.className} text-para-mobile md:text-para-tablet lg:text-para-desktop text-light `}
+            >
               {crew[crewIndex(member)].desc}
             </p>
             {/* Add menu buttons */}
@@ -47,13 +55,13 @@ export default function page() {
             </div>
           </div>
         </div>
-        {/* Right side */}
+        {/* Crew image */}
         <Image
           src={crew[crewIndex(member)].path}
           alt={crew[crewIndex(member)].name}
           width={800}
           height={800}
-          className='pl-10 self-end relative bottom-0 right-0 overflow-hidden'
+          className='pl-10 self-end overflow-hidden row-start-2 border-b-[1px] border-light'
         />
       </div>
     </main>
