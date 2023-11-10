@@ -3,12 +3,12 @@ import { barlowCondensed, barlow, bellefair } from './fonts'
 
 export default function Home() {
   return (
-    <main className='p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center'>
+    <main
+      className={`${barlowCondensed.className} p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
+    >
       <div className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
-        <div className='self-end xl:pr-20'>
-          <p
-            className={`${barlowCondensed.className} text-sm-accent-mobile md:text-sm-accent-tablet lg:text-sm-accent-desktop`}
-          >
+        <div className='flex flex-col gap-2 self-end xl:pr-20'>
+          <p className='text-sm-accent-mobile md:text-sm-accent-tablet lg:text-sm-accent-desktop'>
             So, you want to travel to
           </p>
           <span
