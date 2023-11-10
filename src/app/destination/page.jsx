@@ -14,13 +14,13 @@ export default function page() {
   }, [dest])
 
   return (
-    <main className='min-h-screen p-dest-mobile md:p-dest-tablet xl:p-dest-desktop bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop bg-cover bg-center flex itmes-center'>
+    <main
+      className={`${barlowCondensed.className} min-h-screen p-dest-mobile md:p-dest-tablet xl:p-dest-desktop bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop bg-cover bg-center flex itmes-center`}
+    >
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>
-          <h3
-            className={`${barlowCondensed.className} text-desc-mobile md:text-desc-tablet lg:text-desc-desktop`}
-          >
+          <h3 className='text-desc-mobile md:text-desc-tablet lg:text-desc-desktop'>
             <span className='opacity-25 mr-4'>01</span>Pick your destination
           </h3>
           <div className='dest-img-mobile md:dest-img-tablet xl:dest-img-desktop pt-8 self-center justify-self-center'>
@@ -36,9 +36,7 @@ export default function page() {
         {/* Right side */}
         <div className='grid h-full w-full xl:pl-24 grid-cols-1 grid-flow-row'>
           <nav className='self-center justify-self-center pt-14 xl:justify-self-start'>
-            <ul
-              className={`${barlowCondensed.className} flex gap-9 text-nav2-mobile md:text-nav2-tablet`}
-            >
+            <ul className='flex gap-9 text-nav2-mobile md:text-nav2-tablet'>
               {destinations.map((destination, index) => (
                 <li
                   key={index}
@@ -66,17 +64,13 @@ export default function page() {
           </p>
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 pt-6 mt-7 self-end border-t border-[#383B4B]'>
             <div>
-              <p className={`${barlowCondensed.className} sub-h2 text-light`}>
-                Avg. Distance
-              </p>
+              <p className='sub-h2 text-light'>Avg. Distance</p>
               <p className={`${bellefair.className} sub-h1`}>
                 {destinations[destIndex(dest)].distance}
               </p>
             </div>
             <div>
-              <p className={`${barlowCondensed.className} sub-h2 text-light`}>
-                Est. Travel Time
-              </p>
+              <p className='sub-h2 text-light'>Est. Travel Time</p>
               <p className={`${bellefair.className} sub-h1`}>
                 {destinations[destIndex(dest)].time}
               </p>
