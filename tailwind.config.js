@@ -52,6 +52,36 @@ module.exports = {
         '2.5rem': '2.5rem',
         '3rem': '3rem',
         '3.5rem': '3.5rem',
+        'accent1-mobile': [
+          '5rem',
+          {
+            lineHeight: '6.25rem',
+          },
+        ],
+        'accent1-tablet': [
+          '9.375rem',
+          {
+            lineHeight: '9.375rem',
+          },
+        ],
+        'sub-mobile': [
+          '1rem',
+          {
+            letterSpacing: '0.16875rem',
+          },
+        ],
+        'sub-tablet': [
+          '1.25rem',
+          {
+            letterSpacing: '0.21094rem',
+          },
+        ],
+        'sub-desktop': [
+          '1.75rem',
+          {
+            letterSpacing: '0.29531rem',
+          },
+        ],
         'para-mobile': [
           '0.9375rem',
           {
