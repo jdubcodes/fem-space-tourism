@@ -12,6 +12,17 @@ module.exports = {
       white: '#FFFFFF',
     },
     extend: {
+      padding: {
+        'home-mobile': '8rem 3rem 7rem',
+        'home-tablet': '12.625rem 9.938rem 7.625rem',
+        'home-desktop': '25vh 10.45rem',
+        'dest-mobile': '6.25rem 3.5rem 4rem',
+        'dest-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
+        'dest-desktop': '25vh 10.45rem 7rem',
+        'crew-mobile': '6.25rem 3.5rem 4rem',
+        'crew-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
+        'crew-desktop': '25vh 10.45rem 7rem',
+      },
       maxWidth: {
         container: '69.125rem',
         screen: '100vw',
@@ -34,13 +45,31 @@ module.exports = {
       screens: {
         '3xl': '1921px',
       },
-      padding: {
-        'home-mobile': '8rem 3rem 7rem',
-        'home-tablet': '12.625rem 9.938rem 7.625rem',
-        'home-desktop': '25vh 10.45rem',
-        'dest-mobile': '6.25rem 3.5rem 4rem',
-        'dest-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
-        'dest-desktop': '25vh 10.45rem 7rem',
+      fontSize: {
+        '1rem': '1rem',
+        '1.5rem': '1.5rem',
+        '2rem': '2rem',
+        '2.5rem': '2.5rem',
+        '3rem': '3rem',
+        '3.5rem': '3.5rem',
+        'para-mobile': [
+          '0.9375rem',
+          {
+            lineHeight: '1.5625rem',
+          },
+        ],
+        'para-tablet': [
+          '1rem',
+          {
+            lineHeight: '1.75rem',
+          },
+        ],
+        'para-desktop': [
+          '1.125rem',
+          {
+            lineHeight: '2rem',
+          },
+        ],
       },
       opacity: {
         btn: '0.1036',
