@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useRef, useLayoutEffect } from 'react'
-import { barlowCondensed } from '../fonts'
+import { barlowCondensed } from '../../../config/fonts'
 
 import { gsap } from 'gsap'
 
@@ -35,7 +35,7 @@ export default function Navbar() {
     <header className={`${barlowCondensed.className}`}>
       <Link
         href='/'
-        className='w-10 h-10 absolute left-8 top-8 z-10 md:w-12 md:h-12 md:left-[6vw] md:translate-y-7'
+        className='w-10 h-10 absolute left-8 top-8 z-10 md:w-12 md:h-12 md:left-[6vw] md:translate-y-[1.28rem]'
       >
         <Image src='/shared/logo.svg' alt='Logo' width={48} height={48} />
       </Link>
@@ -66,8 +66,9 @@ export default function Navbar() {
         </div>
       </div>
       {/* desktop menu */}
-      <div className='pt-16 px-24 w-full hidden fixed md:inline lg:px-[10.45rem] z-20'>
+      <div className='p-nav-tablet w-full hidden z-20 absolute md:inline lg:p-nav-lg xl:p-nav-desktop'>
         <div className='flex items-center justify-end max-w-container mx-auto lg:justify-between'>
+          {/* accent line */}
           <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden lg:inline'></span>
           <nav>
             <ul className='flex gap-7 text-nav lg:gap-10'>
