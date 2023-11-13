@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import technology from '../../../config/technology'
 import { techIndex } from '../../../config/findIndex'
-import { barlowCondensed, barlow, bellefair } from '../fonts'
+import { barlowCondensed, barlow, bellefair } from '../../../config/fonts'
 
 export default function page() {
   const [number, setNumber] = useState('1')
