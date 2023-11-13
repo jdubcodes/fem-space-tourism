@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import destinations from '../../../config/destinations'
 import { destIndex } from '../../../config/findIndex'
-import { barlowCondensed, barlow, bellefair } from '../fonts'
+import { barlowCondensed, barlow, bellefair } from '../../../config/fonts'
 
 export default function page() {
   const [dest, setDest] = useState('Moon')
@@ -15,7 +15,7 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen p-dest-mobile md:p-dest-tablet xl:p-dest-desktop bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop bg-cover bg-center flex itmes-center`}
+      className={`${barlowCondensed.className} min-h-screen p-dest-mobile md:p-dest-tablet lg:p-dest-lg xl:p-dest-desktop bg-dest-mobile sm:bg-dest-tablet lg:bg-dest-desktop bg-cover bg-center flex itmes-center`}
     >
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
@@ -58,7 +58,7 @@ export default function page() {
             {destinations[destIndex(dest)].destination}
           </h4>
           <p
-            className={`${barlow.className} min-h-[7.85rem] self-center text-para-mobile md:text-para-tablet lg:text-para-desktop`}
+            className={`${barlow.className} min-h-[7.85rem] self-center text-para-mobile text-light md:text-para-tablet lg:text-para-desktop`}
           >
             {destinations[destIndex(dest)].description}
           </p>
