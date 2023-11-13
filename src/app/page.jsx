@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { barlowCondensed, barlow, bellefair } from './fonts'
+import { barlowCondensed, barlow, bellefair } from '../../config/fonts'
 
 export default function Home() {
   return (
