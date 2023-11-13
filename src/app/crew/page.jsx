@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import crew from '../../../config/crew.js'
 import { crewIndex } from '../../../config/findIndex.js'
-import { barlowCondensed, barlow, bellefair } from '../fonts'
+import { barlowCondensed, barlow, bellefair } from '../../../config/fonts.js'
 
 export default function page() {
   const [member, setMember] = useState('Douglas Hurley')
@@ -17,13 +17,26 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} min-h-screen p-crew-mobile md:p-crew-tablet xl:p-crew-desktop bg-crew-mobile sm:bg-crew-tablet lg:bg-crew-desktop bg-cover bg-center`}
     >
-      <div className='h-full max-h-[700px] w-full max-w-container mx-auto grid grid-cols-1 grid-rows-3 gap-10 lg:grid-rows-1 lg:grid-cols-2 lg:gap-0 text-center lg:text-left'>
-        {/* Left side */}
-        <div className='flex flex-col w-full h-full lg:pr-10'>
-          <h3 className='text-desc-mobile md:text-desc-tablet lg:text-desc-desktop'>
-            <span className='opacity-25 mr-4'>02</span>Meet Your Crew
-          </h3>
-          <div className='flex flex-col mb-auto pt-36 h-[486px] row-start-3'>
+      {/* main grid // 2 rows mobile + tablet // 2 columns desktop */}
+      <div className='h-full w-full max-w-container mx-auto grid grid-flow-row gap-8 text-center lg:grid-rows-1 lg:grid-cols-2 lg:text-left'>
+        <h3 className='text-desc-mobile md:text-desc-tablet lg:text-desc-desktop'>
+          <span className='opacity-25 mr-4'>02</span>Meet Your Crew
+        </h3>
+        {/* 2nd row or column flex */}
+        <div className='flex flex-col'>
+          {/* Crew image */}
+          <div className='w-full self-center justify-self-end border-b-[1px] border-[#383B4B] overflow-hidden'>
+            <div className='w-crew-mobile h-crew-mobile mx-auto flex items-end'>
+              <Image
+                src={crew[crewIndex(member)].path}
+                alt={crew[crewIndex(member)].name}
+                width={800}
+                height={800}
+                layout='responsive'
+              />
+            </div>
+          </div>
+          <div className='flex flex-col lg:mb-auto lg:pt-36 lg:h-[486px]'>
             <h4
               className={`${bellefair.className} text-1rem md:text-1.5rem lg:text-2rem uppercase opacity-50`}
             >
@@ -40,7 +53,7 @@ export default function page() {
               {crew[crewIndex(member)].desc}
             </p>
             {/* Add menu buttons */}
-            <div className='flex gap-6 mt-auto relative -bottom-6'>
+            <div className='flex gap-6 lg:mt-auto relative lg:-bottom-6'>
               {crew.map((crew, index) => (
                 <button
                   key={index}
@@ -55,14 +68,6 @@ export default function page() {
             </div>
           </div>
         </div>
-        {/* Crew image */}
-        <Image
-          src={crew[crewIndex(member)].path}
-          alt={crew[crewIndex(member)].name}
-          width={800}
-          height={800}
-          className='pl-10 self-end overflow-hidden row-start-2 border-b-[1px] border-light'
-        />
       </div>
     </main>
   )
