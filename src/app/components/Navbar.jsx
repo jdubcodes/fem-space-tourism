@@ -43,12 +43,13 @@ export default function Navbar() {
       <div className='md:hidden'>
         {/* hamburger menu button */}
         <MobileButton handleClick={handleClick} isOpen={isOpen} />
+        {/* mobile background */}
         <div
-          className='h-screen p-10 nav-bg translate-x-60 fixed right-0'
+          className='h-screen p-10 nav-bg translate-x-60 fixed right-0 z-10'
           ref={navRef}
         >
           <nav className='pt-28'>
-            <ul className='flex flex-col gap-8 nav-text z-20'>
+            <ul className='flex flex-col gap-8 nav-text'>
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
