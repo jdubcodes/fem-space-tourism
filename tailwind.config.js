@@ -25,16 +25,18 @@ module.exports = {
         'dest-lg': '10.875rem 9rem 2.4375rem 4.375rem',
         'dest-desktop': '25vh 10.45rem 7rem',
         'crew-mobile': '6.25rem 3rem 3rem',
-        'crew-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
+        'crew-tablet': '10.875rem 6.875rem 0rem 4.375rem',
         'crew-desktop': '25vh 10.45rem 7rem',
       },
       width: {
         'nav-line': '29.875rem',
         'crew-mobile': '11.07019rem',
+        'crew-tablet': '26.625rem',
       },
       height: {
         'nav-line': '0.0625rem',
         'crew-mobile': '13.875rem',
+        'crew-tablet': '33.375rem',
       },
       maxWidth: {
         'line-tablet': '32vw',
