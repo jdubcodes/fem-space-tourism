@@ -55,7 +55,7 @@ export default function page() {
               {crew[crewIndex(member)].name}
             </h4>
             <p
-              className={`${barlow.className} text-para-mobile md:text-para-tablet lg:text-para-desktop text-light `}
+              className={`${barlow.className} h-40 text-para-mobile md:text-para-tablet lg:text-para-desktop text-light `}
             >
               {crew[crewIndex(member)].desc}
             </p>
