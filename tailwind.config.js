@@ -30,23 +30,27 @@ module.exports = {
       },
       width: {
         'nav-line': '29.875rem',
-        'crew-mobile': '11.07019rem',
+        'crew-img-mobile': '11.07019rem',
         'crew-tablet': '26.625rem',
       },
       height: {
         'nav-line': '0.0625rem',
-        'crew-mobile': '13.875rem',
-        'crew-tablet': '33.375rem',
+        'crew-img-mobile': '13.875rem',
+        'crew-img-tablet': '33.375rem',
+        'crew-container': 'calc(100vh - 10rem)',
       },
       maxWidth: {
         'line-tablet': '32vw',
         'line-desktop': '28.875rem',
-        container: '69.125rem',
+        container: '70.3rem',
         screen: '100vw',
         'crew-mobile': '11.07019rem',
       },
       maxHeight: {
         'crew-mobile': '13.875rem',
+      },
+      gridTemplateRows: {
+        'crew-mobile': '24px 300px',
       },
       backgroundImage: {
         'crew-desktop': 'url("/crew/background-crew-desktop.jpg")',
