@@ -15,7 +15,7 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen w-screen p-crew-mobile grid items-center justify-items-center bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:p-crew-tablet md:h-screen md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop lg:justify-start lg:pb-0`}
+      className={`${barlowCondensed.className} min-h-screen w-screen p-crew-mobile grid items-center justify-items-center bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:p-crew-tablet md:h-screen md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop lg:justify-start`}
     >
       <h3 className='text-desc-mobile self-start md:justify-self-start md:text-desc-tablet lg:text-desc-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
