@@ -15,28 +15,22 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:h-screen md:p-crew-tablet md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop`}
+      className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center overflow-hidden sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h5 className='text-center text-desc-mobile md:text-left md:text-desc-tablet lg:text-desc-desktop'>
+      <h5 className='pb-2 sm:pb-0 text-center text-desc-mobile md:text-left md:text-desc-tablet lg:text-desc-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h5>
       <div className='h-full flex flex-col lg:flex-row'>
         {/* crew image */}
-        <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last'>
-          <div className='w-crew-img-mobile md:w-crew-tablet h-crew-img-mobile md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end relative overflow-hidden'>
+        <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
+          <div className='w-[75%] h-full max-w-[245px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative aspect-square'>
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
               width={800}
               height={800}
               responsive
-              className={
-                member === 'Douglas Hurley'
-                  ? 'absolute top-0 lg:bottom-0'
-                  : member === 'Mark Shuttleworth'
-                  ? 'absolute top-0'
-                  : 'absolute bottom-0'
-              }
+              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-[3/4]'
             />
           </div>
         </section>
@@ -58,7 +52,7 @@ export default function page() {
             {crew[crewIndex(member)].desc}
           </p>
           {/* menu buttons */}
-          <div className='py-8 flex gap-4 -order-1 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
+          <div className='py-8 flex gap-6 -order-1 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
             {crew.map((crew, index) => (
               <button
                 key={index}
