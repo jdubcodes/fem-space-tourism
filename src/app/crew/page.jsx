@@ -15,68 +15,64 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen w-screen p-crew-mobile grid items-center justify-items-center bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:p-crew-tablet md:h-screen md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop lg:justify-start`}
+      className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:h-screen md:p-crew-tablet md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h5 className='text-desc-mobile self-start md:justify-self-start md:text-desc-tablet lg:text-desc-desktop'>
+      <h5 className='text-center text-desc-mobile md:text-left md:text-desc-tablet lg:text-desc-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h5>
-      {/* main grid // 2 rows mobile + tablet // 2 columns desktop */}
-      <section className='max-w-container mx-auto flex flex-col gap-20 text-center md:self-end lg:self-start lg:text-left'>
-        {/* 2nd row or column flex */}
-        <div className='flex flex-col lg:flex-row'>
-          {/* crew image */}
-          <section className='w-full md:h-crew-tablet self-center justify-self-end border-b-[1px] border-[#383B4B] md:border-0 md:order-last'>
-            <div className='w-crew-img-mobile md:w-crew-tablet h-crew-img-mobile md:h-crew-tablet mx-auto lg:mx-0 flex items-end relative overflow-hidden'>
-              <Image
-                src={crew[crewIndex(member)].path}
-                alt={crew[crewIndex(member)].name}
-                width={800}
-                height={800}
-                layout='responsive'
+      <div className='h-full flex flex-col lg:flex-row'>
+        {/* crew image */}
+        <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last'>
+          <div className='w-crew-img-mobile md:w-crew-tablet h-crew-img-mobile md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end relative overflow-hidden'>
+            <Image
+              src={crew[crewIndex(member)].path}
+              alt={crew[crewIndex(member)].name}
+              width={800}
+              height={800}
+              responsive
+              className={
+                member === 'Douglas Hurley'
+                  ? 'absolute top-0 lg:bottom-0'
+                  : member === 'Mark Shuttleworth'
+                  ? 'absolute top-0'
+                  : 'absolute bottom-0'
+              }
+            />
+          </div>
+        </section>
+        {/* crew info */}
+        <section className='flex flex-col items-center grow text-center lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
+          <h4
+            className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem lg:text-2rem`}
+          >
+            {crew[crewIndex(member)].title}
+          </h4>
+          <h4
+            className={`${bellefair.className} pb-3 text-1.5rem uppercase whitespace-nowrap md:text-2.5rem lg:pb-8 lg:text-3.5rem`}
+          >
+            {crew[crewIndex(member)].name}
+          </h4>
+          <p
+            className={`${barlow.className} h-40 text-para-mobile text-light md:h-20 md:text-para-tablet lg:text-para-desktop`}
+          >
+            {crew[crewIndex(member)].desc}
+          </p>
+          {/* menu buttons */}
+          <div className='py-8 flex gap-4 -order-1 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
+            {crew.map((crew, index) => (
+              <button
+                key={index}
+                onClick={() => setMember(crew.name)}
                 className={
-                  member === 'Douglas Hurley'
-                    ? 'absolute top-0 lg:bottom-0'
-                    : member === 'Mark Shuttleworth'
-                    ? 'absolute top-0'
-                    : 'absolute bottom-0'
+                  member === crew.name
+                    ? 'w-[10px] h-[10px] lg:w-4 lg:h-4 rounded-full bg-white'
+                    : 'w-[10px] h-[10px] lg:w-4 lg:h-4 rounded-full bg-white opacity-[0.175]'
                 }
-              />
-            </div>
-          </section>
-          {/* crew info */}
-          <section className='flex flex-col items-center lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
-            <h4
-              className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem lg:text-2rem`}
-            >
-              {crew[crewIndex(member)].title}
-            </h4>
-            <h4
-              className={`${bellefair.className} pb-3 lg:pb-8 text-1.5rem md:text-2.5rem lg:text-3.5rem uppercase whitespace-nowrap `}
-            >
-              {crew[crewIndex(member)].name}
-            </h4>
-            <p
-              className={`${barlow.className} h-40 text-para-mobile md:h-20 md:text-para-tablet lg:text-para-desktop text-light `}
-            >
-              {crew[crewIndex(member)].desc}
-            </p>
-            {/* menu buttons */}
-            <div className='flex gap-4 -order-1 py-8 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
-              {crew.map((crew, index) => (
-                <button
-                  key={index}
-                  onClick={() => setMember(crew.name)}
-                  className={
-                    member === crew.name
-                      ? 'w-[10px] h-[10px] lg:w-4 lg:h-4 rounded-full bg-white'
-                      : 'w-[10px] h-[10px] lg:w-4 lg:h-4 rounded-full bg-white opacity-[0.175]'
-                  }
-                ></button>
-              ))}
-            </div>
-          </section>
-        </div>
-      </section>
+              ></button>
+            ))}
+          </div>
+        </section>
+      </div>
     </main>
   )
 }
