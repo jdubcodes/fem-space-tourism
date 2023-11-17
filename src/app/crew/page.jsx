@@ -17,16 +17,16 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} min-h-screen w-screen p-crew-mobile grid items-center justify-items-center bg-crew-mobile bg-cover bg-center sm:bg-crew-tablet md:p-crew-tablet md:h-screen md:overflow-hidden lg:bg-crew-desktop xl:p-crew-desktop lg:justify-start`}
     >
-      <h3 className='text-desc-mobile self-start md:justify-self-start md:text-desc-tablet lg:text-desc-desktop'>
+      <h5 className='text-desc-mobile self-start md:justify-self-start md:text-desc-tablet lg:text-desc-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
-      </h3>
+      </h5>
       {/* main grid // 2 rows mobile + tablet // 2 columns desktop */}
-      <div className='max-w-container mx-auto flex flex-col gap-20 text-center md:self-end lg:self-start lg:text-left'>
+      <section className='max-w-container mx-auto flex flex-col gap-20 text-center md:self-end lg:self-start lg:text-left'>
         {/* 2nd row or column flex */}
         <div className='flex flex-col lg:flex-row'>
           {/* crew image */}
-          <div className='w-full md:h-crew-tablet self-center justify-self-end border-b-[1px] border-[#383B4B] md:border-0 md:order-last'>
-            <div className='w-crew-mobile md:w-crew-tablet h-crew-mobile md:h-crew-tablet mx-auto lg:mx-0 flex items-end relative overflow-hidden'>
+          <section className='w-full md:h-crew-tablet self-center justify-self-end border-b-[1px] border-[#383B4B] md:border-0 md:order-last'>
+            <div className='w-crew-img-mobile md:w-crew-tablet h-crew-img-mobile md:h-crew-tablet mx-auto lg:mx-0 flex items-end relative overflow-hidden'>
               <Image
                 src={crew[crewIndex(member)].path}
                 alt={crew[crewIndex(member)].name}
@@ -42,9 +42,9 @@ export default function page() {
                 }
               />
             </div>
-          </div>
+          </section>
           {/* crew info */}
-          <div className='flex flex-col items-center lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
+          <section className='flex flex-col items-center lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
             <h4
               className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem lg:text-2rem`}
             >
@@ -74,9 +74,9 @@ export default function page() {
                 ></button>
               ))}
             </div>
-          </div>
+          </section>
         </div>
-      </div>
+      </section>
     </main>
   )
 }
