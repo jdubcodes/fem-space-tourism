@@ -11,6 +11,9 @@ module.exports = {
       light: '#D0D6F9',
       white: '#FFFFFF',
     },
+    screens: {
+      xs: '390px',
+    },
     extend: {
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
@@ -32,12 +35,13 @@ module.exports = {
         'nav-line': '29.875rem',
         'crew-img-mobile': '11.07019rem',
         'crew-tablet': '26.625rem',
+        calc: '50vw',
       },
       height: {
         'nav-line': '0.0625rem',
         'crew-img-mobile': '13.875rem',
         'crew-img-tablet': '33.375rem',
-        'crew-container': 'calc(100vh - 10rem)',
+        calc: 'calc(100vh - 65vh)',
       },
       maxWidth: {
         'line-tablet': '32vw',
