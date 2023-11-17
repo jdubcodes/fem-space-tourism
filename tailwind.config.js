@@ -26,7 +26,7 @@ module.exports = {
         'dest-desktop': '25vh 10.45rem 7rem',
         'crew-mobile': '6.25rem 3rem 3rem',
         'crew-tablet': '10.875rem 6.875rem 0rem 4.375rem',
-        'crew-desktop': '25vh 10.45rem 7rem',
+        'crew-desktop': '25vh 10.45rem 0rem',
       },
       width: {
         'nav-line': '29.875rem',
