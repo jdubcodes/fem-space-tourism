@@ -27,8 +27,10 @@ export default function page() {
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
-              fill
-              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-[3/4]'
+              width={800}
+              height={800}
+              responsive
+              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-square xs:aspect-[3/4]'
             />
           </div>
         </section>
