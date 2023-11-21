@@ -30,7 +30,7 @@ export default function page() {
               width={800}
               height={800}
               responsive
-              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-square xs:aspect-[3/4]'
+              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
             />
           </div>
         </section>
@@ -52,7 +52,7 @@ export default function page() {
             {crew[crewIndex(member)].desc}
           </p>
           {/* menu buttons */}
-          <div className='py-8 flex gap-6 -order-1 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
+          <div className='py-5 flex gap-6 -order-1 xs:py-8 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
             {crew.map((crew, index) => (
               <button
                 key={index}
