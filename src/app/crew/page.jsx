@@ -30,7 +30,13 @@ export default function page() {
               width={800}
               height={800}
               responsive
-              className='absolute top-0 xs:bottom-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
+              className={
+                member === 'Douglas Hurley'
+                  ? 'absolute top-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
+                  : member === 'Mark Shuttleworth'
+                  ? 'absolute top-0 xs:top-auto sm:bottom-0 aspect-auto xs:aspect-[3/4]'
+                  : 'absolute bottom-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
+              }
             />
           </div>
         </section>
@@ -42,7 +48,7 @@ export default function page() {
             {crew[crewIndex(member)].title}
           </h4>
           <h4
-            className={`${bellefair.className} pb-3 text-1.5rem uppercase whitespace-nowrap md:text-2.5rem lg:pb-8 lg:text-3.5rem`}
+            className={`${bellefair.className} pb-2 xs:pb-3 text-1.5rem uppercase whitespace-nowrap md:text-2.5rem lg:pb-8 lg:text-3.5rem`}
           >
             {crew[crewIndex(member)].name}
           </h4>
