@@ -14,9 +14,11 @@ export default function page() {
   }, [number])
 
   return (
-    <main className='pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden'>
+    <main
+      className={`${barlowCondensed.className} pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
+    >
       <div className='bottom-0 h-full w-full'>
-        <h3 className={`${barlowCondensed.className} h5`}>
+        <h3 className='text-sub-mobile md:text-sub-tablet lg:text-sub-desktop uppercase'>
           <span className='opacity-25 mr-4'>03</span>Space launch 101
         </h3>
         {/* left side */}
@@ -37,11 +39,7 @@ export default function page() {
             ))}
           </div>
           <div className='flex flex-col gap-1 justify-center'>
-            <span
-              className={`${barlowCondensed.className} nav-text text-light`}
-            >
-              The terminology...
-            </span>
+            <span className='nav-text text-light'>The terminology...</span>
             <h4 className={`${bellefair.className} h3 mb-4`}>
               {technology[techIndex(number)].tech}
             </h4>
