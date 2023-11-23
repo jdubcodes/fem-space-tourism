@@ -30,7 +30,7 @@ export default function page() {
                 onClick={() => setNumber(item.num)}
                 className={
                   item.num === number
-                    ? `${bellefair.className} w-20 h-20 rounded-full h4 bg-white text-dark`
+                    ? `${bellefair.className} w-20 h-20 rounded-full h4 bg-white`
                     : `${bellefair.className} w-20 h-20 rounded-full h4 border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out`
                 }
               >
