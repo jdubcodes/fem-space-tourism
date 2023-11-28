@@ -11,10 +11,10 @@ module.exports = {
       light: '#D0D6F9',
       white: '#FFFFFF',
     },
-    screens: {
-      xs: '390px',
-    },
     extend: {
+      screens: {
+        xs: '390px',
+      },
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
         'nav-tablet': '4rem 6.875rem 0rem',
