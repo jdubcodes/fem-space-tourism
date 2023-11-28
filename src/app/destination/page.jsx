@@ -20,7 +20,7 @@ export default function page() {
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>
-          <h3 className='text-desc-mobile md:text-desc-tablet lg:text-desc-desktop'>
+          <h3 className='text-sub-mobile uppercase md:text-sub-tablet lg:text-sub-desktop'>
             <span className='opacity-25 mr-4'>01</span>Pick your destination
           </h3>
           <div className='dest-img-mobile md:dest-img-tablet xl:dest-img-desktop pt-8 self-center justify-self-center'>
