@@ -135,6 +135,18 @@ module.exports = {
             lineHeight: '2rem',
           },
         ],
+        'nav2-mobile': [
+          '0.856rem',
+          {
+            letterSpacing: '0.14763rem',
+          },
+        ],
+        'nav2-tablet': [
+          '1rem',
+          {
+            letterSpacing: '0.16875rem',
+          },
+        ],
       },
       opacity: {
         line: '0.2515',
