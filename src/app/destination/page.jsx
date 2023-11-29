@@ -53,7 +53,7 @@ export default function page() {
             </ul>
           </nav>
           <h4
-            className={`${bellefair.className} text-accent2-mobile pt-7 md:text-accent2-tablet lg:text-accent2-desktop`}
+            className={`${bellefair.className} text-accent2-mobile pt-7 uppercase md:text-accent2-tablet lg:text-accent2-desktop`}
           >
             {destinations[destIndex(dest)].destination}
           </h4>
