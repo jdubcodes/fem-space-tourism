@@ -36,7 +36,7 @@ export default function page() {
         {/* Right side */}
         <div className='grid h-full w-full xl:pl-24 grid-cols-1 grid-flow-row'>
           <nav className='self-center justify-self-center pt-14 xl:justify-self-start'>
-            <ul className='flex gap-9 text-nav2-mobile md:text-nav2-tablet'>
+            <ul className='flex gap-9 text-nav2-mobile md:text-nav2-tablet uppercase'>
               {destinations.map((destination, index) => (
                 <li
                   key={index}
