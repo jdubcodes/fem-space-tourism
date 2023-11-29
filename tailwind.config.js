@@ -99,6 +99,9 @@ module.exports = {
             lineHeight: '9.375rem',
           },
         ],
+        'accent2-mobile': '3.5rem',
+        'accent2-tablet': '5rem',
+        'accent2-desktop': '6.25rem',
         'sub-mobile': [
           '1rem',
           {
