@@ -11,7 +11,21 @@ export default function page() {
 
   useEffect(() => {
     crewIndex()
+    console.log(member)
+    para(member)
   }, [member])
+
+  const para = (member) => {
+    if (member === 'Douglas Hurley') {
+      return '7rem'
+    } else if (member === 'Mark Shuttleworth') {
+      return '5rem'
+    } else if (member === 'Victor Glover') {
+      return '3rem'
+    } else {
+      return '6rem'
+    }
+  }
 
   return (
     <main
@@ -20,7 +34,7 @@ export default function page() {
       <h5 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h5>
-      <div className='h-full flex flex-col lg:flex-row'>
+      <div className='h-full flex flex-col md:items-center lg:flex-row'>
         {/* crew image */}
         <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
           <div className='w-[65%] max-w-[245px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative aspect-[3/4]'>
@@ -41,7 +55,7 @@ export default function page() {
           </div>
         </section>
         {/* crew info */}
-        <section className='flex flex-col items-center grow text-center lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
+        <section className='flex flex-col items-center grow text-center md:pt-[3.75rem] md:max-w-crew-tablet lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
           <h4
             className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem lg:text-2rem`}
           >
@@ -53,12 +67,16 @@ export default function page() {
             {crew[crewIndex(member)].name}
           </h4>
           <p
-            className={`${barlow.className} h-40 text-para-mobile text-light md:h-20 md:text-para-tablet lg:text-para-desktop`}
+            className={`${
+              barlow.className
+            } h-40 text-para-mobile text-light md:h-20 md:text-para-tablet lg:text-para-desktop md:px-[${para(
+              member
+            )}]`}
           >
             {crew[crewIndex(member)].desc}
           </p>
           {/* menu buttons */}
-          <div className='py-5 flex gap-6 -order-1 xs:py-8 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
+          <div className='py-5 flex gap-6 -order-1 xs:py-8 md:py-10 md:order-last lg:p-0 lg:gap-6 lg:mt-auto lg:-bottom-6'>
             {crew.map((crew, index) => (
               <button
                 key={index}
