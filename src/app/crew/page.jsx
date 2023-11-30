@@ -17,7 +17,7 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center overflow-hidden sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h5 className='pb-2 sm:pb-0 text-center text-desc-mobile md:text-left md:text-desc-tablet lg:text-desc-desktop'>
+      <h5 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h5>
       <div className='h-full flex flex-col lg:flex-row'>
