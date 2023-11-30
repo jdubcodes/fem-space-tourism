@@ -17,7 +17,7 @@ module.exports = {
       },
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
-        'nav-tablet': '4rem 6.875rem 0rem',
+        'nav-tablet': '4rem 2.875rem 0rem',
         'nav-lg': '4rem 9rem 0rem',
         'nav-desktop': '4rem 10.45rem 0rem',
         'home-mobile': '8rem 3rem 8rem',
