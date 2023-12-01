@@ -45,7 +45,7 @@ export default function Navbar() {
         <MobileButton handleClick={handleClick} isOpen={isOpen} />
         {/* mobile background */}
         <div
-          className='h-screen p-10 nav-bg translate-x-60 fixed right-0 z-10'
+          className='h-screen p-12 nav-bg translate-x-60 fixed right-0 z-10'
           ref={navRef}
         >
           <nav className='pt-28'>
@@ -67,11 +67,11 @@ export default function Navbar() {
         </div>
       </div>
       {/* desktop menu */}
-      <div className='p-nav-tablet w-full hidden z-20 absolute md:inline lg:p-nav-lg xl:p-nav-desktop'>
-        <div className='flex items-center justify-end max-w-container mx-auto lg:justify-between'>
+      <div className='pt-nav-tablet w-full hidden z-20 absolute md:inline xl:p-nav-lg pc:p-nav-desktop'>
+        <div className='flex items-center justify-end max-w-container ml-auto xl:justify-between xl:gap-8'>
           {/* accent line */}
-          <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden lg:inline'></span>
-          <nav>
+          <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden xl:inline'></span>
+          <nav className='px-24 py-9 nav-bg xl:p-0 xl:bg-transparent'>
             <ul className='flex gap-7 text-nav lg:gap-10'>
               {menuItems.map((item, index) => (
                 <li key={index}>
@@ -93,9 +93,9 @@ export default function Navbar() {
             </ul>
           </nav>
         </div>
+        {/* Nav desktop background */}
+        <div className='hidden w-[55vw] p-10 absolute right-0 top-7 nav-bg z-[-1] xl:inline'></div>
       </div>
-      {/* Nav desktop background */}
-      <div className='hidden absolute right-0 top-7 w-[63vw] md:inline lg:w-[60vw] xl:w-[57vw] nav-bg'></div>
     </header>
   )
 }
