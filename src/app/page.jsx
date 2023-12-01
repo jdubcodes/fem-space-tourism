@@ -4,7 +4,7 @@ import { barlowCondensed, barlow, bellefair } from '../../config/fonts'
 export default function Home() {
   return (
     <main
-      className={`${barlowCondensed.className} p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
+      className={`${barlowCondensed.className} p-home-short xs:p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
     >
       <div className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
         <div className='flex flex-col gap-2 self-end sm:gap-4 md:self-center xl:self-end xl:pr-20'>
