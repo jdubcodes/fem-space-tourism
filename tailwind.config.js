@@ -23,7 +23,7 @@ module.exports = {
     extend: {
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
-        'nav-tablet': '2rem',
+        'nav-tablet': '1.875rem',
         'nav-lg': '3rem 9rem 0rem',
         'nav-desktop': '2rem 10.45rem 0rem',
         'home-short': '8rem 3rem 2rem',
