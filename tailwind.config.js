@@ -12,9 +12,10 @@ module.exports = {
       white: '#FFFFFF',
     },
     screens: {
-      xs: '376px',
+      xs: '376px', // mobile design
       sm: '640px',
       md: '768px', // tablet design
+      tab: '912px',
       lg: '1024px',
       xl: '1280px',
       pc: '1440px', // desktop design
@@ -22,9 +23,9 @@ module.exports = {
     extend: {
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
-        'nav-tablet': '4rem 2.875rem 0rem',
-        'nav-lg': '4rem 9rem 0rem',
-        'nav-desktop': '4rem 10.45rem 0rem',
+        'nav-tablet': '2rem',
+        'nav-lg': '3rem 9rem 0rem',
+        'nav-desktop': '2rem 10.45rem 0rem',
         'home-short': '8rem 3rem 2rem',
         'home-mobile': '8rem 3rem 8rem',
         'home-tablet': '12.625rem 9.938rem 4.625rem',
@@ -36,6 +37,7 @@ module.exports = {
         'crew-mobile': '6.25rem 3rem 1rem',
         'crew-tablet': '10.875rem 2.5rem 4.375rem',
         'crew-desktop': '25vh 10.45rem 0rem',
+        'tech-mobile': '',
       },
       width: {
         'nav-line': '29.875rem',
