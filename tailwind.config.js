@@ -11,15 +11,21 @@ module.exports = {
       light: '#D0D6F9',
       white: '#FFFFFF',
     },
+    screens: {
+      xs: '376px',
+      sm: '640px',
+      md: '768px', // tablet design
+      lg: '1024px',
+      xl: '1280px',
+      pc: '1440px', // desktop design
+    },
     extend: {
-      screens: {
-        xs: '390px',
-      },
       padding: {
         'nav-mobile': '4rem 3.5rem 0rem',
         'nav-tablet': '4rem 2.875rem 0rem',
         'nav-lg': '4rem 9rem 0rem',
         'nav-desktop': '4rem 10.45rem 0rem',
+        'home-short': '8rem 3rem 2rem',
         'home-mobile': '8rem 3rem 8rem',
         'home-tablet': '12.625rem 9.938rem 4.625rem',
         'home-desktop': '25vh 10.45rem',
