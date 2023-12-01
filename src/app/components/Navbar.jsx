@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className='flex items-center justify-end max-w-container ml-auto xl:justify-between xl:gap-8'>
           {/* accent line */}
           <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden xl:inline'></span>
-          <nav className='px-24 py-9 nav-bg xl:p-0 xl:bg-transparent'>
+          <nav className='px-12 py-[2.063rem] nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0'>
             <ul className='flex gap-7 text-nav lg:gap-10'>
               {menuItems.map((item, index) => (
                 <li key={index}>
@@ -79,8 +79,8 @@ export default function Navbar() {
                     href={item.path}
                     className={
                       pathname == item.path
-                        ? 'pb-[2.125rem] border-b-[3px] border-white uppercase'
-                        : 'pb-[2.125rem] border-b-[3px] border-hidden border-[#979797] ease-out uppercase hover:border-solid'
+                        ? 'pb-8 border-b-[3px] border-white uppercase'
+                        : 'pb-8 border-b-[3px] border-hidden border-[#979797] ease-out uppercase hover:border-solid'
                     }
                   >
                     <span className='font-bold mr-2 hidden xl:inline'>
@@ -94,7 +94,7 @@ export default function Navbar() {
           </nav>
         </div>
         {/* Nav desktop background */}
-        <div className='hidden w-[55vw] p-10 absolute right-0 top-7 nav-bg z-[-1] xl:inline'></div>
+        <div className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline'></div>
       </div>
     </header>
   )
