@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @layer utilities {
+  .nav-bg {
+    padding: 2.25rem 6rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+  }
+
+  .mobile-nav-bg {
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+  }
+
   .btn-desktop {
     width: 17.125rem;
     height: 17.125rem;
@@ -101,12 +113,6 @@
     font-size: 1.125rem;
     line-height: 2rem;
     color: #d0d6f9;
-  }
-
-  .nav-bg {
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.04);
-    backdrop-filter: blur(40.774227142333984px);
   }
 }
 
