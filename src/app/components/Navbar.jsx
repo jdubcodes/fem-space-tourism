@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className='flex items-center justify-end max-w-container ml-auto xl:justify-between xl:gap-8'>
           {/* accent line */}
           <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden xl:inline'></span>
-          <nav className='px-12 py-[2.063rem] nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0'>
+          <nav className='px-12 py-[2.063rem] max-xl:nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0'>
             <ul className='flex gap-7 text-nav lg:gap-10'>
               {menuItems.map((item, index) => (
                 <li key={index}>
