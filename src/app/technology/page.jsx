@@ -17,10 +17,10 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
+      <h3 className='text-sub-mobile md:text-sub-tablet lg:text-sub-desktop uppercase'>
+        <span className='opacity-25 mr-4'>03</span>Space launch 101
+      </h3>
       <div className='bottom-0 h-full w-full'>
-        <h3 className='text-sub-mobile md:text-sub-tablet lg:text-sub-desktop uppercase'>
-          <span className='opacity-25 mr-4'>03</span>Space launch 101
-        </h3>
         {/* left side */}
         <div className='flex gap-20 h-full w-[51%]'>
           <div className='flex flex-col gap-8 justify-center'>
