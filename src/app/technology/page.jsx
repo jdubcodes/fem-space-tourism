@@ -20,8 +20,12 @@ export default function page() {
       <h3 className='text-sub-mobile md:text-sub-tablet lg:text-sub-desktop uppercase'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h3>
+      <section id='main section'>
+        <div id='photo'></div>
+        <div id='buttons'></div>
+        <div id='text'></div>
+      </section>
       <div className='bottom-0 h-full w-full'>
-        {/* left side */}
         <div className='flex gap-20 h-full w-[51%]'>
           <div className='flex flex-col gap-8 justify-center'>
             {technology.map((item) => (
