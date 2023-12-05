@@ -68,9 +68,9 @@ export default function Navbar() {
       </div>
       {/* desktop menu */}
       <div className='pt-nav-tablet w-full hidden z-20 absolute md:inline xl:p-nav-lg pc:p-nav-desktop'>
-        <div className='flex items-center justify-end max-w-container ml-auto xl:justify-between xl:gap-8'>
+        <div className='ml-auto flex items-center justify-end max-w-container xl:mx-auto'>
           {/* accent line */}
-          <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden xl:inline'></span>
+          {/* <span className='w-full h-nav-line max-w-line-tablet xl:max-w-line-desktop justify-self-start opacity-line bg-white hidden xl:inline'></span> */}
           <nav className='px-12 py-[2.063rem] max-xl:nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0'>
             <ul className='flex gap-7 text-nav lg:gap-10'>
               {menuItems.map((item, index) => (
@@ -93,8 +93,12 @@ export default function Navbar() {
             </ul>
           </nav>
         </div>
+
         {/* Nav desktop background */}
-        <div className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline'></div>
+        <div className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline'>
+          {' '}
+          <span className='w-[32.5rem] h-nav-line opacity-line bg-white hidden xl:inline z-10 absolute -translate-x-[32.75rem]'></span>
+        </div>
       </div>
     </header>
   )
