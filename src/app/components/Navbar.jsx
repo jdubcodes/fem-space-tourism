@@ -49,7 +49,7 @@ export default function Navbar() {
           ref={navRef}
         >
           <nav className='pt-28'>
-            <ul className='flex flex-col gap-8 nav-text'>
+            <ul className='flex flex-col gap-8 text-nav uppercase'>
               {menuItems.map((item, index) => (
                 <li key={index}>
                   <Link
