@@ -29,10 +29,12 @@ export default function Home() {
           href='/destination'
           className='justify-self-center self-end md:self-center xl:justify-self-end xl:self-end'
         >
+          {/* explore button */}
           <div
-            className={`${bellefair.className} btn-mobile md:btn-tablet xl:btn-desktop bg-white rounded-full`}
+            className={`${bellefair.className} btn-mobile-sm xs:btn-mobile md:btn-tablet xl:btn-desktop bg-white rounded-full`}
           >
             Explore
+            {/* hover effect */}
             <span className='absolute btn-mobile md:btn-tablet xl:btn-desktop opacity-0 bg-white rounded-full hover:btn-hover-mobile md:hover:btn-hover-tablet xl:hover:btn-hover-desktop hover:opacity-btn duration-700 origin-center ease-in-out'></span>
           </div>
         </Link>
