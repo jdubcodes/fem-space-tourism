@@ -64,49 +64,6 @@
     width: 10.625rem;
     height: 10.625rem;
   }
-
-  .title-text-desktop {
-    font-size: 2rem;
-  }
-
-  .title-text-tablet {
-    font-size: 1.5rem;
-  }
-
-  .title-text-mobile {
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  .name-text-mobile {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #ffffff;
-  }
-
-  .sub-h1 {
-    font-size: 1.75rem;
-    text-transform: uppercase;
-  }
-
-  .sub-h2 {
-    font-size: 0.875rem;
-    letter-spacing: 0.14763rem;
-    text-transform: uppercase;
-  }
-
-  .nav-text {
-    font-size: 1rem;
-    letter-spacing: 0.16875rem;
-    text-transform: uppercase;
-  }
-
-  .body-text {
-    font-size: 1.125rem;
-    line-height: 2rem;
-    color: #d0d6f9;
-  }
 }
 
 * {
