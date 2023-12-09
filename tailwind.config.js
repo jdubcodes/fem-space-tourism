@@ -133,6 +133,7 @@ module.exports = {
             letterSpacing: '0.14763rem',
           },
         ],
+        'nums-mobile': '1.75rem',
         'para-mobile': [
           '0.9375rem',
           {

@@ -67,7 +67,9 @@ export default function page() {
               <p className='text-sub2-mobile text-light uppercase'>
                 Avg. Distance
               </p>
-              <p className={`${bellefair.className} sub-h1`}>
+              <p
+                className={`${bellefair.className} text-nums-mobile uppercase`}
+              >
                 {destinations[destIndex(dest)].distance}
               </p>
             </div>
@@ -75,7 +77,9 @@ export default function page() {
               <p className='text-sub2-mobile text-light uppercase'>
                 Est. Travel Time
               </p>
-              <p className={`${bellefair.className} sub-h1`}>
+              <p
+                className={`${bellefair.className} text-nums-mobile uppercase`}
+              >
                 {destinations[destIndex(dest)].time}
               </p>
             </div>
