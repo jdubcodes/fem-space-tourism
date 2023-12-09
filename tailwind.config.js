@@ -127,6 +127,12 @@ module.exports = {
             letterSpacing: '0.29531rem',
           },
         ],
+        'sub2-mobile': [
+          '0.875rem',
+          {
+            letterSpacing: '0.14763rem',
+          },
+        ],
         'para-mobile': [
           '0.9375rem',
           {

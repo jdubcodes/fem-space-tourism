@@ -64,13 +64,17 @@ export default function page() {
           </p>
           <div className='grid grid-cols-1 gap-6 md:grid-cols-2 pt-6 mt-7 self-end border-t border-[#383B4B]'>
             <div>
-              <p className='sub-h2 text-light'>Avg. Distance</p>
+              <p className='text-sub2-mobile text-light uppercase'>
+                Avg. Distance
+              </p>
               <p className={`${bellefair.className} sub-h1`}>
                 {destinations[destIndex(dest)].distance}
               </p>
             </div>
             <div>
-              <p className='sub-h2 text-light'>Est. Travel Time</p>
+              <p className='text-sub2-mobile text-light uppercase'>
+                Est. Travel Time
+              </p>
               <p className={`${bellefair.className} sub-h1`}>
                 {destinations[destIndex(dest)].time}
               </p>
