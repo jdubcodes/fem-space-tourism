@@ -15,18 +15,19 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} pt-[25vh] pb-[6.25rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
+      className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
-      <h5 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h5 className='pb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h5>
       <section id='main section'>
-        <div id='photo' className='w-[100vw]'>
+        <div id='photo' className='w-[100vw] h-[170px]'>
           <Image
             src={technology[techIndex(number)].pathMobile}
             alt={technology[techIndex(number)].tech}
             width={515}
             height={527}
+            responsive
             className=''
           />
         </div>
