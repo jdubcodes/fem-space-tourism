@@ -17,9 +17,9 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} pt-[25vh] pb-[6.25rem] pl-[10.45rem] h-screen w-screen absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
-      <h3 className='text-sub-mobile md:text-sub-tablet lg:text-sub-desktop uppercase'>
+      <h5 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
-      </h3>
+      </h5>
       <section id='main section'>
         <div id='photo'></div>
         <div id='buttons'></div>
