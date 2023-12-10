@@ -37,6 +37,7 @@ module.exports = {
         'crew-mobile': '6.25rem 3rem 1rem',
         'crew-tablet': '10.875rem 2.5rem 4.375rem',
         'crew-desktop': '25vh 10.45rem 0rem',
+        'tech-mobile': '6.25rem 0 0',
       },
       width: {
         'nav-line': '29.875rem',
