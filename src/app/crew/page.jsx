@@ -11,7 +11,6 @@ export default function page() {
 
   useEffect(() => {
     crewIndex()
-    console.log(member)
     para(member)
   }, [member])
 
