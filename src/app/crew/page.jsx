@@ -43,7 +43,7 @@ export default function page() {
               alt={crew[crewIndex(member)].name}
               width={800}
               height={800}
-              responsive
+              responsive='true'
               className={
                 member === 'Douglas Hurley'
                   ? 'absolute top-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
