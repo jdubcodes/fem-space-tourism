@@ -20,7 +20,7 @@ export default function page() {
       <h5 className='pb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h5>
-      <section id='main section'>
+      <section id='main section' className='flex items-center flex-col'>
         <div id='photo' className='w-[100vw] h-[170px]'>
           <Image
             src={technology[techIndex(number)].pathMobile}
@@ -31,7 +31,21 @@ export default function page() {
             className=''
           />
         </div>
-        <div id='buttons'></div>
+        <div id='buttons' className='pt-[2.125rem] flex gap-4'>
+          {technology.map((item) => (
+            <button
+              key={item.num}
+              onClick={() => setNumber(item.num)}
+              className={
+                item.num === number
+                  ? `${bellefair.className} w-10 h-10 rounded-full bg-white text-dark`
+                  : `${bellefair.className} w-10 h-10 rounded-full border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out`
+              }
+            >
+              {item.num}
+            </button>
+          ))}
+        </div>
         <div id='text'></div>
       </section>
     </main>
