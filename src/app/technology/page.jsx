@@ -27,7 +27,7 @@ export default function page() {
             alt={technology[techIndex(number)].tech}
             width={515}
             height={527}
-            responsive
+            responsive='true'
             className=''
           />
         </div>
