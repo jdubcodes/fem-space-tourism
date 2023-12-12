@@ -17,7 +17,7 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
-      <h5 className='pb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h5 className='mb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h5>
       <section id='main section' className='flex items-center flex-col'>
@@ -31,7 +31,7 @@ export default function page() {
             className=''
           />
         </div>
-        <div id='buttons' className='pt-[2.125rem] flex gap-4'>
+        <div id='buttons' className='mt-[2.125rem] mb-[1.625rem] flex gap-4'>
           {technology.map((item) => (
             <button
               key={item.num}
@@ -46,7 +46,23 @@ export default function page() {
             </button>
           ))}
         </div>
-        <div id='text'></div>
+        <div id='text' className='text-center'>
+          <div className=''>
+            <span className='mb-2 text-sub2-mobile text-light uppercase'>
+              The terminology...
+            </span>
+            <h4
+              className={`${bellefair.className} mb-4 text-[1.5rem] uppercase`}
+            >
+              {technology[techIndex(number)].tech}
+            </h4>
+            <p
+              className={`${barlow.className} mx-6 para-mobile text-light text-balance`}
+            >
+              {technology[techIndex(number)].desc}
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   )
