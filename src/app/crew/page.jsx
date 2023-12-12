@@ -61,14 +61,14 @@ export default function page() {
             {crew[crewIndex(member)].title}
           </h4>
           <h4
-            className={`${bellefair.className} pb-2 xs:pb-3 text-1.5rem uppercase whitespace-nowrap md:text-2.5rem lg:pb-8 lg:text-3.5rem`}
+            className={`${bellefair.className} pb-2 xs:pb-3 text-[1.5rem] uppercase whitespace-nowrap md:text-[2.5rem] lg:pb-8 lg:text-[3.5rem]`}
           >
             {crew[crewIndex(member)].name}
           </h4>
           <p
             className={`${
               barlow.className
-            } h-40 text-para-mobile text-light md:h-20 md:text-para-tablet lg:text-para-desktop md:px-[${para(
+            } h-40 text-para-mobile text-light text-balance md:h-20 md:text-para-tablet lg:text-para-desktop md:px-[${para(
               member
             )}]`}
           >
