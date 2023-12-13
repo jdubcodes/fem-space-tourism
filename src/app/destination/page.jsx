@@ -15,14 +15,14 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen p-dest-mobile bg-dest-tablet bg-cover bg-center flex itmes-center md:p-dest-tablet lg:p-dest-lg lg:bg-dest-desktop xl:p-dest-desktop`}
+      className={`${barlowCondensed.className} min-h-screen p-dest-mobile bg-dest-tablet bg-cover bg-center md:p-dest-tablet lg:p-dest-lg lg:bg-dest-desktop xl:p-dest-desktop`}
     >
+      <h1 className='text-sub-mobile text-center uppercase md:text-sub-tablet md:justify-self-start lg:text-sub-desktop'>
+        <span className='opacity-25 mr-4'>01</span>Pick your destination
+      </h1>
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>
-          <h3 className='text-sub-mobile uppercase md:text-sub-tablet md:justify-self-start lg:text-sub-desktop'>
-            <span className='opacity-25 mr-4'>01</span>Pick your destination
-          </h3>
           <div className='dest-img-mobile md:dest-img-tablet xl:dest-img-desktop pt-8 self-center justify-self-center'>
             <Image
               src={destinations[destIndex(dest)].path}
@@ -52,11 +52,11 @@ export default function page() {
               ))}
             </ul>
           </nav>
-          <h4
+          <h2
             className={`${bellefair.className} text-accent2-mobile pt-7 uppercase md:text-accent2-tablet lg:text-accent2-desktop`}
           >
             {destinations[destIndex(dest)].destination}
-          </h4>
+          </h2>
           <p
             className={`${barlow.className} min-h-[9.35rem] self-center text-para-mobile text-light md:text-para-tablet lg:text-para-desktop`}
           >
