@@ -30,9 +30,9 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center overflow-hidden sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h5 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
-      </h5>
+      </h1>
       <div className='h-full flex flex-col md:items-center lg:flex-row'>
         {/* crew image */}
         <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
@@ -55,16 +55,16 @@ export default function page() {
         </section>
         {/* crew info */}
         <section className='flex flex-col items-center grow text-center md:pt-[3.75rem] md:max-w-crew-tablet lg:mb-auto lg:pt-36 lg:h-[486px] lg:max-w-[600px] lg:items-start'>
-          <h4
+          <h2
             className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem lg:text-2rem`}
           >
             {crew[crewIndex(member)].title}
-          </h4>
-          <h4
+          </h2>
+          <h2
             className={`${bellefair.className} pb-2 xs:pb-3 text-[1.5rem] uppercase whitespace-nowrap md:text-[2.5rem] lg:pb-8 lg:text-[3.5rem]`}
           >
             {crew[crewIndex(member)].name}
-          </h4>
+          </h2>
           <p
             className={`${
               barlow.className
