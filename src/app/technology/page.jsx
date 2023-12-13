@@ -17,17 +17,17 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
-      <h5 className='mb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='mb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
-      </h5>
+      </h1>
       <section id='main section' className='flex items-center flex-col'>
-        <div id='photo' className='w-[100vw] h-[170px]'>
+        <div id='photo' className='w-[100vw] h-[200px]'>
           <Image
             src={technology[techIndex(number)].pathMobile}
             alt={technology[techIndex(number)].tech}
             width={515}
             height={527}
-            responsive='true'
+            responsive={true}
             className=''
           />
         </div>
@@ -47,21 +47,17 @@ export default function page() {
           ))}
         </div>
         <div id='text' className='text-center'>
-          <div className=''>
-            <span className='mb-2 text-sub2-mobile text-light uppercase'>
-              The terminology...
-            </span>
-            <h4
-              className={`${bellefair.className} mb-4 text-[1.5rem] uppercase`}
-            >
-              {technology[techIndex(number)].tech}
-            </h4>
-            <p
-              className={`${barlow.className} mx-6 para-mobile text-light text-balance`}
-            >
-              {technology[techIndex(number)].desc}
-            </p>
-          </div>
+          <span className='mb-2 text-sub2-mobile text-light uppercase'>
+            The terminology...
+          </span>
+          <h2 className={`${bellefair.className} mb-4 text-[1.5rem] uppercase`}>
+            {technology[techIndex(number)].tech}
+          </h2>
+          <p
+            className={`${barlow.className} mx-6 para-mobile text-light text-balance`}
+          >
+            {technology[techIndex(number)].desc}
+          </p>
         </div>
       </section>
     </main>
