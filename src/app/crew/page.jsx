@@ -36,7 +36,7 @@ export default function page() {
       <div className='h-full flex flex-col md:items-center lg:flex-row'>
         {/* crew image */}
         <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
-          <div className='w-[65%] max-w-[245px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative aspect-[3/4]'>
+          <div className='w-[65%] max-w-[245px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative'>
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
@@ -45,10 +45,10 @@ export default function page() {
               responsive='true'
               className={
                 member === 'Douglas Hurley'
-                  ? 'absolute top-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
+                  ? 'absolute top-0 xs:top-auto aspect-auto]'
                   : member === 'Mark Shuttleworth'
-                  ? 'absolute top-0 xs:top-auto sm:bottom-0 aspect-auto xs:aspect-[3/4]'
-                  : 'absolute bottom-0 xs:top-auto aspect-auto xs:aspect-[3/4]'
+                  ? 'absolute top-0 xs:top-auto sm:bottom-0 aspect-auto'
+                  : 'absolute bottom-0 xs:top-auto aspect-auto'
               }
             />
           </div>
