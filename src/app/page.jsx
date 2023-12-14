@@ -17,7 +17,7 @@ export default function Home() {
             Space
           </span>
           <p
-            className={`${barlow.className} max-w-md self-center text-para-mobile text-light sm:text-para-tablet md:max-w-xl lg:text-para-desktop`}
+            className={`${barlow.className} max-w-md self-center text-para-mobile text-light text-balance sm:text-para-tablet md:max-w-xl lg:text-para-desktop`}
           >
             Let’s face it; if you want to go to space, you might as well
             genuinely go to outer space and not hover kind of on the edge of it.
