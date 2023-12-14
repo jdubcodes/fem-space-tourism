@@ -30,7 +30,7 @@ module.exports = {
         'home-mobile': '8rem 3rem 8rem',
         'home-tablet': '12.625rem 9.938rem 4.625rem',
         'home-desktop': '25vh 10.45rem',
-        'dest-mobile': '6.25rem 3.5rem 4rem',
+        'dest-mobile': '6.25rem 3.5rem 0rem',
         'dest-tablet': '10.875rem 6.875rem 2.4375rem 4.375rem',
         'dest-lg': '10.875rem 9rem 2.4375rem 4.375rem',
         'dest-desktop': '25vh 10.45rem 7rem',
