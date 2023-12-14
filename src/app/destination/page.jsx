@@ -23,20 +23,20 @@ export default function page() {
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
         {/* Left side */}
         <div className='grid w-full h-full'>
-          <div className='dest-img-mobile md:dest-img-tablet xl:dest-img-desktop pt-8 self-center justify-self-center'>
+          <div className='dest-img-mobile md:dest-img-tablet xl:dest-img-desktop mt-8 self-center justify-self-center'>
             <Image
               src={destinations[destIndex(dest)].path}
               alt={`${destinations[destIndex(dest)].destination}`}
               layout='responsive'
-              width={100}
-              height={100}
+              width={400}
+              height={400}
             />
           </div>
         </div>
         {/* Right side */}
         <div className='grid h-full w-full xl:pl-24 grid-cols-1 grid-flow-row'>
-          <nav className='self-center justify-self-center pt-14 xl:justify-self-start'>
-            <ul className='flex gap-9 text-nav2-mobile md:text-nav2-tablet uppercase'>
+          <nav className='self-center justify-self-center mt-6 xl:justify-self-start'>
+            <ul className='flex gap-9 text-nav2-mobile md:text-nav2-tablet uppercase text-light'>
               {destinations.map((destination, index) => (
                 <li
                   key={index}
@@ -53,16 +53,16 @@ export default function page() {
             </ul>
           </nav>
           <h2
-            className={`${bellefair.className} text-accent2-mobile pt-7 uppercase md:text-accent2-tablet lg:text-accent2-desktop`}
+            className={`${bellefair.className} text-accent2-mobile mt-7 uppercase md:text-accent2-tablet lg:text-accent2-desktop`}
           >
             {destinations[destIndex(dest)].destination}
           </h2>
           <p
-            className={`${barlow.className} min-h-[9.35rem] self-center text-para-mobile text-light md:text-para-tablet lg:text-para-desktop`}
+            className={`${barlow.className} min-h-[8rem] self-center text-para-mobile text-light text-balance md:text-para-tablet lg:text-para-desktop`}
           >
             {destinations[destIndex(dest)].description}
           </p>
-          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 pt-6 mt-7 self-end border-t border-[#383B4B]'>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 pt-6 mt-6 self-end border-t border-[#383B4B]'>
             <div>
               <p className='text-sub2-mobile text-light uppercase'>
                 Avg. Distance
