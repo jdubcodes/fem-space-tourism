@@ -28,7 +28,7 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center overflow-hidden sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
+      className={`${barlowCondensed.className} w-screen h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
       <h1 className='mb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
@@ -45,9 +45,9 @@ export default function page() {
               sizes='(max-width: 768px) 428px, 568px'
               className={
                 member === 'Douglas Hurley'
-                  ? 'absolute top-0 xs:top-auto'
+                  ? 'absolute top-0'
                   : member === 'Mark Shuttleworth'
-                  ? 'absolute top-0 xs:top-auto sm:bottom-0'
+                  ? 'absolute top-0 sm:bottom-0'
                   : 'absolute bottom-0 xs:top-auto'
               }
             />
