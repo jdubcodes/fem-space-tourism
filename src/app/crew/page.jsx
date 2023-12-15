@@ -30,25 +30,25 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} w-screen h-screen p-crew-mobile bg-crew-mobile bg-cover bg-center overflow-hidden sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h1 className='pb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='mb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h1>
       <div className='h-full flex flex-col md:items-center lg:flex-row'>
         {/* crew image */}
         <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
-          <div className='w-[65%] max-w-[245px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative'>
+          <div className='w-[13.875rem] h-[273px] md:w-crew-tablet md:h-crew-img-tablet mx-auto lg:mx-0 flex items-end overflow-hidden relative'>
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
-              width={800}
-              height={800}
-              responsive='true'
+              width={500}
+              height={500}
+              sizes='(max-width: 768px) 428px, 568px'
               className={
                 member === 'Douglas Hurley'
-                  ? 'absolute top-0 xs:top-auto aspect-auto]'
+                  ? 'absolute top-0 xs:top-auto'
                   : member === 'Mark Shuttleworth'
-                  ? 'absolute top-0 xs:top-auto sm:bottom-0 aspect-auto'
-                  : 'absolute bottom-0 xs:top-auto aspect-auto'
+                  ? 'absolute top-0 xs:top-auto sm:bottom-0'
+                  : 'absolute bottom-0 xs:top-auto'
               }
             />
           </div>
