@@ -17,21 +17,21 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden`}
     >
-      <h1 className='mb-8 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='mb-12 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
       <section id='main section' className='flex items-center flex-col'>
-        <div id='photo' className='w-[100vw] h-[200px]'>
+        <div id='photo' className='w-[100vw] h-[230px] relative'>
           <Image
             src={technology[techIndex(number)].pathMobile}
             alt={technology[techIndex(number)].tech}
             width={515}
             height={527}
             responsive={true}
-            className=''
+            className='h-[100%] absolute top-0'
           />
         </div>
-        <div id='buttons' className='mt-[2.125rem] mb-[1.625rem] flex gap-4'>
+        <div id='buttons' className='mt-[2.125rem] mb-[2rem] flex gap-4'>
           {technology.map((item) => (
             <button
               key={item.num}
@@ -47,10 +47,12 @@ export default function page() {
           ))}
         </div>
         <div id='text' className='text-center'>
-          <span className='mb-2 text-sub2-mobile text-light uppercase'>
+          <span className='text-sub2-mobile text-light uppercase'>
             The terminology...
           </span>
-          <h2 className={`${bellefair.className} mb-4 text-[1.5rem] uppercase`}>
+          <h2
+            className={`${bellefair.className} mt-3 mb-2 text-[2rem] uppercase`}
+          >
             {technology[techIndex(number)].tech}
           </h2>
           <p
