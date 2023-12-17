@@ -28,7 +28,7 @@ export default function page() {
             width={515}
             height={527}
             responsive={true}
-            className='h-[100%] absolute top-0'
+            className='h-[100%] absolute'
           />
         </div>
         <div id='buttons' className='mt-[2.125rem] mb-[2rem] flex gap-4'>
