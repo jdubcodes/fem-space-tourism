@@ -68,7 +68,7 @@ export default function page() {
           <p
             className={`${
               barlow.className
-            } h-40 text-para-mobile text-light text-balance md:h-20 md:text-para-tablet lg:text-para-desktop md:px-[${para(
+            } h-40 text-para-mobile text-light text-balance md:h-20 md:text-para-tablet md:max-w-[37rem] lg:text-para-desktop md:px-[${para(
               member
             )}]`}
           >
