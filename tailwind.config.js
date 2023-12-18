@@ -36,7 +36,7 @@ module.exports = {
         'dest-desktop': '25vh 10.45rem 7rem',
         'crew-small': '6.25rem 3rem 1rem',
         'crew-mobile': '6.25rem 3rem 5rem',
-        'crew-tablet': '10.875rem 2.5rem 4.375rem',
+        'crew-tablet': '10.875rem 2.5rem 0rem',
         'crew-desktop': '25vh 10.45rem 0rem',
         'tech-mobile': '6.25rem 0 0',
       },
