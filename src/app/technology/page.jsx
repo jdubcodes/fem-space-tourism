@@ -38,8 +38,8 @@ export default function page() {
               onClick={() => setNumber(item.num)}
               className={
                 item.num === number
-                  ? `${bellefair.className} w-10 h-10 rounded-full bg-white text-dark`
-                  : `${bellefair.className} w-10 h-10 rounded-full border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out`
+                  ? `${bellefair.className} w-10 h-10 rounded-full bg-white text-dark md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem]`
+                  : `${bellefair.className} w-10 h-10 rounded-full border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem]`
               }
             >
               {item.num}
