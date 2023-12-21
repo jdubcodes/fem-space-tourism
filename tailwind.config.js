@@ -130,6 +130,12 @@ module.exports = {
             letterSpacing: '0.14763rem',
           },
         ],
+        'sub2-tablet': [
+          '1rem',
+          {
+            letterSpacing: '0.16875rem',
+          },
+        ],
         'nums-mobile': '1.75rem',
         'para-mobile': [
           '0.9375rem',
