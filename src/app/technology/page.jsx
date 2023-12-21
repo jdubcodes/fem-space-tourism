@@ -21,14 +21,17 @@ export default function page() {
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
       <section id='main section' className='flex items-center flex-col'>
-        <div id='photo' className='w-[100vw] h-[230px] relative'>
+        <div
+          id='photo'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px]'
+        >
           <Image
             src={technology[techIndex(number)].pathMobile}
             alt={technology[techIndex(number)].tech}
-            width={515}
+            width={1024}
             height={527}
             responsive={true}
-            className='h-[100%] absolute'
+            className='h-[100%]'
           />
         </div>
         <div id='buttons' className='mt-[2.125rem] mb-[2rem] flex gap-4'>
@@ -56,7 +59,7 @@ export default function page() {
             {technology[techIndex(number)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px]`}
           >
             {technology[techIndex(number)].desc}
           </p>
