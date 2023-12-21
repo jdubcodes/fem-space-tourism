@@ -15,9 +15,9 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen p-dest-mobile bg-dest-tablet bg-cover bg-center md:p-dest-tablet lg:p-dest-lg lg:bg-dest-desktop xl:p-dest-desktop`}
+      className={`${barlowCondensed.className} min-h-screen p-dest-mobile bg-dest-tablet bg-cover bg-center md:p-dest-tablet lg:p-dest-lg lg:bg-dest-desktop pc:p-dest-desktop`}
     >
-      <h1 className='text-sub-mobile text-center uppercase md:text-sub-tablet md:justify-self-start lg:text-sub-desktop'>
+      <h1 className='text-sub-mobile text-center uppercase md:text-sub-tablet md:justify-self-start lg:text-sub-desktop xl:mb-16 xl:text-start'>
         <span className='opacity-25 mr-4'>01</span>Pick your destination
       </h1>
       <div className='m-auto w-full max-w-container grid grid-cols-1 auto-rows-auto text-center lg:gap-0 xl:grid-cols-2 xl:text-left'>
@@ -58,7 +58,7 @@ export default function page() {
             {destinations[destIndex(dest)].destination}
           </h2>
           <p
-            className={`${barlow.className} min-h-[8rem] self-center text-para-mobile text-light text-balance md:text-para-tablet lg:text-para-desktop`}
+            className={`${barlow.className} max-w-[34rem] min-h-[8rem] self-center justify-self-center text-para-mobile text-light text-balance md:text-para-tablet lg:max-w-[40rem] lg:text-para-desktop`}
           >
             {destinations[destIndex(dest)].description}
           </p>
