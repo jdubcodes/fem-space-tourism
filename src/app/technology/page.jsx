@@ -47,16 +47,16 @@ export default function page() {
           ))}
         </div>
         <div id='text' className='text-center'>
-          <span className='text-sub2-mobile text-light uppercase'>
+          <span className='text-sub2-mobile text-light uppercase md:text-sub2-tablet'>
             The terminology...
           </span>
           <h2
-            className={`${bellefair.className} mt-3 mb-2 text-[2rem] uppercase`}
+            className={`${bellefair.className} mt-3 mb-2 text-[2rem] uppercase md:text-[2.5rem]`}
           >
             {technology[techIndex(number)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 para-mobile text-light text-balance`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet`}
           >
             {technology[techIndex(number)].desc}
           </p>
