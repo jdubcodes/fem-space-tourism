@@ -167,6 +167,12 @@ module.exports = {
             letterSpacing: '0.16875rem',
           },
         ],
+        'nums-desktop': [
+          '2rem',
+          {
+            letterSpacing: '0.125rem',
+          },
+        ],
       },
       opacity: {
         line: '0.2515',
