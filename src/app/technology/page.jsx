@@ -17,13 +17,16 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet`}
     >
-      <h1 className='mb-12 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-left md:text-sub-tablet lg:mx-auto lg:mb-[1.625rem] lg:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
-      <section id='main section' className='flex items-center flex-col'>
+      <section
+        id='main section'
+        className='flex items-center flex-col lg:flex-row'
+      >
         <div
           id='photo'
-          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px]'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] lg:order-3'
         >
           <Image
             src={technology[techIndex(number)].pathMobile}
@@ -34,7 +37,10 @@ export default function page() {
             className='h-[100%]'
           />
         </div>
-        <div id='buttons' className='mt-[2.125rem] mb-[2rem] flex gap-4'>
+        <div
+          id='buttons'
+          className='mt-[2.125rem] mb-[2rem] flex gap-4 lg:mr-20 lg:order-1 lg:flex-col'
+        >
           {technology.map((item) => (
             <button
               key={item.num}
@@ -49,7 +55,7 @@ export default function page() {
             </button>
           ))}
         </div>
-        <div id='text' className='text-center'>
+        <div id='text' className='text-center lg:pr-20 lg:order-2'>
           <span className='text-sub2-mobile text-light uppercase md:text-sub2-tablet'>
             The terminology...
           </span>
