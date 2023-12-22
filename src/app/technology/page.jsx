@@ -17,16 +17,16 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet`}
     >
-      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-left md:text-sub-tablet lg:mx-auto lg:mb-[1.625rem] lg:text-sub-desktop'>
+      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-left md:text-sub-tablet xl:mx-auto xl:mb-[1.625rem] xl:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
       <section
         id='main section'
-        className='flex items-center flex-col lg:flex-row'
+        className='flex items-center flex-col xl:flex-row'
       >
         <div
           id='photo'
-          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] lg:order-3'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3'
         >
           <Image
             src={technology[techIndex(number)].pathMobile}
@@ -47,15 +47,15 @@ export default function page() {
               onClick={() => setNumber(item.num)}
               className={
                 item.num === number
-                  ? `${bellefair.className} w-10 h-10 rounded-full bg-white text-dark md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem]`
-                  : `${bellefair.className} w-10 h-10 rounded-full border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem]`
+                  ? `${bellefair.className} w-10 h-10 rounded-full bg-white text-dark md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem] xl:w-20 xl:h-20 xl:text-nums-desktop`
+                  : `${bellefair.className} w-10 h-10 rounded-full border-2 border-light border-opacity-30 hover:border-opacity-1 hover:border-white duration-200 ease-out md:w-[3.75rem] md:h-[3.75rem] md:text-[1.5rem] xl:w-20 xl:h-20 xl:text-nums-desktop`
               }
             >
               {item.num}
             </button>
           ))}
         </div>
-        <div id='text' className='text-center lg:pr-20 lg:order-2'>
+        <div id='text' className='text-center xl:pr-20 xl:order-2'>
           <span className='text-sub2-mobile text-light uppercase md:text-sub2-tablet'>
             The terminology...
           </span>
