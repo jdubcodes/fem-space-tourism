@@ -28,13 +28,13 @@ export default function page() {
 
   const imgStyle = (member) => {
     if (member === 'Douglas Hurley') {
-      return 'w-[200px] xl:h-[712px]'
+      return 'w-[200px] md:w-[426px] md:h-[534px] xl:w-[568px] xl:h-[712px]'
     } else if (member === 'Mark Shuttleworth') {
-      return 'w-[184px] xl:h-[654px]'
+      return 'w-[184px] md:w-[369px] md:h-[532px] xl:w-[453px] xl:h-[654px]'
     } else if (member === 'Victor Glover') {
-      return 'w-[220px] xl:h-[681px]'
+      return 'w-[220px] md:w-[433px] md:h-[532px] xl:w-[554px] xl:h-[681px]'
     } else {
-      return 'w-[220px] xl:h-[607px]'
+      return 'w-[220px] md:w-[540px] md:h-[532px] xl:w-[615px] xl:h-[607px]'
     }
   }
 
