@@ -30,7 +30,7 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} w-screen h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
-      <h1 className='mb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-left md:text-sub-tablet lg:text-sub-desktop'>
+      <h1 className='mb-2 uppercase sm:pb-0 text-center text-sub-mobile md:text-sub-tablet lg:text-sub-desktop lg:text-left'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
       </h1>
       <div className='h-full flex flex-col md:items-center lg:flex-row'>
@@ -68,7 +68,7 @@ export default function page() {
           <p
             className={`${
               barlow.className
-            } h-40 text-para-mobile text-light text-balance md:h-20 md:text-para-tablet md:max-w-[37rem] lg:text-para-desktop md:px-[${para(
+            } h-40 text-para-mobile text-light text-balance md:h-20 md:text-para-tablet sm:max-w-[37rem] lg:text-para-desktop lg:text-start md:px-[${para(
               member
             )}]`}
           >
