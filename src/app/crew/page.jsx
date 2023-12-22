@@ -28,19 +28,19 @@ export default function page() {
 
   const imgStyle = (member) => {
     if (member === 'Douglas Hurley') {
-      return 'absolute top-0 xl:h-[712px]'
+      return 'w-[200px] xl:h-[712px]'
     } else if (member === 'Mark Shuttleworth') {
-      return 'absolute top-0 sm:bottom-0 xl:h-[654px]'
+      return 'w-[184px] xl:h-[654px]'
     } else if (member === 'Victor Glover') {
-      return 'absolute bottom-0 xs:top-auto xl:h-[681px]'
+      return 'w-[220px] xl:h-[681px]'
     } else {
-      return 'absolute bottom-0 xs:top-auto xl:h-[607px]'
+      return 'w-[220px] xl:h-[607px]'
     }
   }
 
   return (
     <main
-      className={`${barlowCondensed.className} w-screen h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
+      className={`${barlowCondensed.className} min-h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:h-screen xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
     >
       <h1 className='mb-2 max-w-container uppercase sm:pb-0 text-center text-sub-mobile md:text-sub-tablet xl:m-auto xl:text-sub-desktop xl:text-left'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
@@ -48,20 +48,14 @@ export default function page() {
       <div className='h-full max-w-container flex flex-col md:items-center xl:m-auto xl:flex-row'>
         {/* crew image */}
         <section className='w-full grid grow items-end border-b-[1px] border-[#383B4B] overflow-hidden md:h-crew-tablet md:border-0 md:order-last xl:h-[112%] xl:justify-items-end xl:flex-1'>
-          <div className='w-[13.875rem] h-[273px] mx-auto flex items-end overflow-hidden relative md:w-crew-tablet md:h-crew-img-tablet xl:h-full xl:w-full xl:mx-0 xl:justify-end'>
+          <div className='w-[13.875rem] h-[273px] mx-auto flex justify-center items-end overflow-hidden relative md:w-crew-tablet md:h-crew-img-tablet xl:h-full xl:w-full xl:mx-0 xl:justify-end'>
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
-              width={1000}
-              height={1000}
-              sizes='(max-width: 768px) 428px, 568px'
-              className={
-                member === 'Douglas Hurley'
-                  ? 'absolute top-0 xl:h-[712px]'
-                  : member === 'Mark Shuttleworth'
-                  ? 'absolute top-0 sm:bottom-0 xl:h-[654px]'
-                  : 'absolute bottom-0 xs:top-auto xl:h-[681px]'
-              }
+              width={620}
+              height={715}
+              sizes='(max-width: 768px) 226px, (max-width: 1440px) 540px, 615px'
+              className={imgStyle(member)}
             />
           </div>
         </section>
