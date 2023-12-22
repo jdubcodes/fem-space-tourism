@@ -35,7 +35,7 @@ export default function page() {
       </h1>
       <div className='h-full flex flex-col md:items-center xl:flex-row'>
         {/* crew image */}
-        <section className='w-full grid items-end grow md:h-crew-tablet border-b-[1px] border-[#383B4B] md:border-0 md:order-last overflow-hidden'>
+        <section className='w-full grid grow border-b-[1px] border-[#383B4B] overflow-hidden md:h-crew-tablet md:border-0 md:order-last xl:justify-items-end xl:flex-1'>
           <div className='w-[13.875rem] h-[273px] mx-auto flex items-end overflow-hidden relative md:w-crew-tablet md:h-crew-img-tablet xl:mx-0'>
             <Image
               src={crew[crewIndex(member)].path}
@@ -54,7 +54,7 @@ export default function page() {
           </div>
         </section>
         {/* crew info */}
-        <section className='flex flex-col items-center grow text-center md:pt-[3.75rem] md:max-w-crew-tablet xl:mb-auto xl:pt-36 xl:h-[486px] xl:max-w-[600px] xl:items-start'>
+        <section className='flex flex-col items-center grow text-center md:pt-[3.75rem] md:max-w-crew-tablet xl:mb-auto xl:pt-36 xl:h-[486px] xl:max-w-[600px] xl:items-start xl:flex-1'>
           <h2
             className={`${bellefair.className} text-1rem uppercase opacity-50 md:text-1.5rem xl:text-[2rem]`}
           >
