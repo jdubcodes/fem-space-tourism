@@ -10,9 +10,20 @@ import { techImg } from '../../../config/techImages'
 export default function page() {
   const [i, setI] = useState('1')
 
+  const w = () => {
+    const [width, setWidth] = useState(0) // default width, detect on server.
+    const handleResize = () => setWidth(window.innerWidth)
+    useEffect(() => {
+      window.addEventListener('resize', handleResize)
+      return () => window.removeEventListener('resize', handleResize)
+    }, [handleResize])
+    console.log(width)
+    return width
+  }
+
   useEffect(() => {
     techIndex()
-    console.log(window.innerWidth)
+    console.log(w)
   }, [i])
 
   return (
@@ -31,11 +42,11 @@ export default function page() {
           className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3'
         >
           <Image
-            src={techImg(i)}
+            src={techImg(i, w)}
             alt={technology[techIndex(i)].tech}
             width={1024}
             height={527}
-            responsive={true}
+            // responsive={true}
             className='h-[100%]'
           />
         </div>
