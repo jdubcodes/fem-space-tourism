@@ -10,25 +10,24 @@ import { techImg } from '../../../config/techImages'
 export default function page() {
   const [i, setI] = useState('1')
 
-  const w = () => {
+  const width = () => {
     const [width, setWidth] = useState(0) // default width, detect on server.
     const handleResize = () => setWidth(window.innerWidth)
     useEffect(() => {
       window.addEventListener('resize', handleResize)
       return () => window.removeEventListener('resize', handleResize)
     }, [handleResize])
-    console.log(width)
     return width
   }
 
   useEffect(() => {
     techIndex()
-    console.log(w)
+    console.log(width)
   }, [i])
 
   return (
     <main
-      className={`${barlowCondensed.className} h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet`}
+      className={`${barlowCondensed.className} min-h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet`}
     >
       <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-sub-tablet xl:mx-auto xl:mb-[1.625rem] xl:text-left xl:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
@@ -42,7 +41,7 @@ export default function page() {
           className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3'
         >
           <Image
-            src={techImg(i, w)}
+            src={techImg(i, width)}
             alt={technology[techIndex(i)].tech}
             width={1024}
             height={527}
