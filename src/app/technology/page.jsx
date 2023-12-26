@@ -22,7 +22,6 @@ export default function page() {
 
   useEffect(() => {
     techIndex()
-    console.log(width)
   }, [i])
 
   return (
