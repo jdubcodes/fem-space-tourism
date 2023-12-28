@@ -33,11 +33,11 @@ export default function page() {
       </h1>
       <section
         id='main section'
-        className='flex items-center flex-col xl:flex-row'
+        className='flex items-center flex-col xl:flex-row xl:max-w-container xl:mx-auto'
       >
         <div
           id='photo'
-          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3 xl:absolute xl:right-0'
         >
           <Image
             src={techImg(i, width)}
