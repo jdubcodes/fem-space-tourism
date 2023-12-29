@@ -37,7 +37,7 @@ export default function page() {
       >
         <div
           id='photo'
-          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3 xl:absolute xl:right-0'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3 xl:absolute xl:right-0 xl:w-[515px] xl:h-[526px]'
         >
           <Image
             src={techImg(i, width)}
@@ -45,7 +45,7 @@ export default function page() {
             width={1024}
             height={527}
             // responsive={true}
-            className='h-[100%]'
+            className='h-[100%] xl:absolute xl:right-0'
           />
         </div>
         <div
