@@ -66,7 +66,7 @@ export default function page() {
             </button>
           ))}
         </div>
-        <div id='text' className='text-center xl:pr-20 xl:order-2'>
+        <div id='text' className='text-center xl:pr-20 xl:order-2 xl:text-left'>
           <span className='text-sub2-mobile text-light uppercase md:text-sub2-tablet'>
             The terminology...
           </span>
@@ -76,7 +76,7 @@ export default function page() {
             {technology[techIndex(i)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px]`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0`}
           >
             {technology[techIndex(i)].desc}
           </p>
