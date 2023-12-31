@@ -71,12 +71,12 @@ export default function page() {
             The terminology...
           </span>
           <h2
-            className={`${bellefair.className} mt-3 mb-2 text-[2rem] uppercase md:text-[2.5rem]`}
+            className={`${bellefair.className} mt-3 mb-2 text-[2rem] uppercase md:text-[2.5rem] xl:text-[3.5rem]`}
           >
             {technology[techIndex(i)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop`}
           >
             {technology[techIndex(i)].desc}
           </p>
