@@ -28,7 +28,7 @@ export default function page() {
     <main
       className={`${barlowCondensed.className} min-h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet`}
     >
-      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-sub-tablet xl:mx-auto xl:mb-[1.625rem] xl:text-left xl:text-sub-desktop'>
+      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-sub-tablet xl:mx-auto xl:mb-[8.56rem] xl:text-left xl:text-sub-desktop'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
       <section
