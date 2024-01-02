@@ -76,7 +76,7 @@ export default function page() {
             {technology[techIndex(i)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop xl:text-pretty`}
           >
             {technology[techIndex(i)].desc}
           </p>
