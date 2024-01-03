@@ -32,7 +32,7 @@ export default function page() {
     } else if (member === 'Mark Shuttleworth') {
       return 'w-[184px] md:w-[369px] md:h-[532px] xl:w-[440px] xl:h-[644px]'
     } else if (member === 'Victor Glover') {
-      return 'w-[220px] md:w-[433px] md:h-[532px] xl:w-[554px] xl:h-[681px]'
+      return 'w-[220px] md:w-[433px] md:h-[532px] xl:w-[547px] xl:h-[643px]'
     } else {
       return 'w-[220px] md:w-[540px] md:h-[532px] xl:w-[615px] xl:h-[607px]'
     }
