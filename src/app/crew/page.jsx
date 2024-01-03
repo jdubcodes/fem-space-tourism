@@ -28,7 +28,7 @@ export default function page() {
 
   const imgStyle = (member) => {
     if (member === 'Douglas Hurley') {
-      return 'w-[200px] md:w-[426px] md:h-[534px] xl:w-[568px] xl:h-[712px]'
+      return 'w-[200px] md:w-[426px] md:h-[534px] xl:w-[519px] xl:h-[712px]'
     } else if (member === 'Mark Shuttleworth') {
       return 'w-[184px] md:w-[369px] md:h-[532px] xl:w-[453px] xl:h-[654px]'
     } else if (member === 'Victor Glover') {
