@@ -179,6 +179,9 @@ module.exports = {
         line: '0.2515',
         btn: '0.1036',
       },
+      scale: {
+        6: '0.6',
+      },
     },
   },
   plugins: [],
