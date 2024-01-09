@@ -47,15 +47,17 @@ export default function page() {
       </h1>
       <div className='h-full max-w-container flex flex-col md:items-center xl:m-auto xl:flex-row pc:h-auto'>
         {/* crew image */}
-        <section className='w-full grid grow items-end border-b-[1px] border-[#383B4B] overflow-hidden md:h-crew-tablet md:border-0 md:order-last xl:h-[112%] xl:justify-items-end xl:flex-1 pc:h-auto'>
-          <div className='w-[13.875rem] h-[273px] mx-auto flex justify-center items-end overflow-hidden relative md:w-crew-tablet md:h-crew-img-tablet xl:h-full xl:w-full xl:mx-0 xl:justify-end '>
+        <section className='w-full grid grow items-end border-b-[1px] border-[#383B4B] overflow-hidden md:h-crew-tablet md:border-0 md:order-last xl:h-[112%] xl:justify-items-end xl:flex-1 pc:h-auto pc:border-b-[1px]'>
+          <div className='w-[13.875rem] h-[273px] mx-auto flex justify-center items-end overflow-hidden relative md:w-crew-tablet md:h-crew-img-tablet xl:h-full xl:w-full xl:mx-0 xl:justify-end pc:h-[32.5rem] pc:relative'>
             <Image
               src={crew[crewIndex(member)].path}
               alt={crew[crewIndex(member)].name}
               width={620}
               height={715}
               sizes='(max-width: 768px) 226px, (max-width: 1440px) 540px, 615px'
-              className={`${imgStyle(member)} pc:scale-6`}
+              className={`${imgStyle(
+                member
+              )} pc:h-auto pc:scale-75 pc:absolute pc:top-0`}
             />
           </div>
         </section>
