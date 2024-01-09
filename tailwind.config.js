@@ -18,7 +18,7 @@ module.exports = {
       tab: '912px',
       lg: '1024px',
       xl: '1280px',
-      pc: '1440px', // desktop design
+      pc: '1921px', // desktop design
     },
     extend: {
       padding: {
