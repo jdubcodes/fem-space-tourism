@@ -16,9 +16,9 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet xl:p-tech-desktop`}
+      className={`${barlowCondensed.className} min-h-screen w-screen p-tech-mobile absolute top-0 bg-tech-desktop bg-cover overflow-hidden md:p-tech-tablet pc:p-tech-desktop`}
     >
-      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-sub-tablet xl:mx-auto xl:mb-[8.56rem] xl:text-left xl:text-sub-desktop'>
+      <h1 className='max-w-container mb-12 uppercase text-center text-sub-mobile sm:pb-0 md:text-sub-tablet xl:mx-auto xl:mb-[8.56rem] xl:text-left xl:text-sub-desktop pc:mb-16'>
         <span className='opacity-25 mr-4'>03</span>Space launch 101
       </h1>
       <section
@@ -40,7 +40,7 @@ export default function page() {
         </div>
         <div
           id='buttons'
-          className='mt-[2.125rem] mb-[2rem] flex gap-4 xl:mr-20 xl:order-1 xl:flex-col'
+          className='mt-[2.125rem] mb-[2rem] flex gap-4 xl:mr-20 xl:order-1 xl:flex-col pc:mr-12'
         >
           {technology.map((item) => (
             <button
@@ -69,7 +69,7 @@ export default function page() {
             {technology[techIndex(i)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop xl:text-pretty pc:min-h-[12rem]`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:min-h-[12rem] xl:text-para-desktop xl:text-pretty`}
           >
             {technology[techIndex(i)].desc}
           </p>
