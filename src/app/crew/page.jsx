@@ -40,7 +40,7 @@ export default function page() {
 
   return (
     <main
-      className={`${barlowCondensed.className} min-h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:h-screen xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop xl:p-crew-desktop`}
+      className={`${barlowCondensed.className} min-h-screen p-crew-small bg-crew-mobile bg-cover bg-center overflow-hidden xs:h-screen xs:p-crew-mobile sm:bg-crew-tablet md:h-screen md:p-crew-tablet lg:bg-crew-desktop pc:p-crew-desktop`}
     >
       <h1 className='mb-2 max-w-container uppercase sm:pb-0 text-center text-sub-mobile md:text-sub-tablet xl:m-auto xl:text-sub-desktop xl:text-left'>
         <span className='opacity-25 mr-4'>02</span>Meet Your Crew
