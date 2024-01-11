@@ -27,7 +27,7 @@ export default function page() {
       >
         <div
           id='photo'
-          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3 xl:absolute xl:right-0 xl:w-[515px] xl:h-[526px]'
+          className='w-[100vw] h-[230px] relative overflow-hidden flex items-center justify-center md:h-[310px] xl:order-3 xl:absolute xl:right-0 xl:w-[515px] xl:h-[526px] pc:ml-auto pc:w-[420px] pc:h-[510px] pc:static'
         >
           <Image
             src={techImg(i, window.innerWidth)}
@@ -35,7 +35,7 @@ export default function page() {
             width={1024}
             height={527}
             // responsive={true}
-            className='h-[100%] xl:absolute xl:right-0'
+            className='h-[100%] xl:absolute xl:right-0 pc:static'
           />
         </div>
         <div
@@ -56,7 +56,10 @@ export default function page() {
             </button>
           ))}
         </div>
-        <div id='text' className='text-center xl:pr-20 xl:order-2 xl:text-left'>
+        <div
+          id='text'
+          className='text-center xl:pr-20 xl:order-2 xl:text-left pc:pr-0'
+        >
           <span className='text-sub2-mobile text-light uppercase md:text-sub2-tablet'>
             The terminology...
           </span>
@@ -66,7 +69,7 @@ export default function page() {
             {technology[techIndex(i)].tech}
           </h2>
           <p
-            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop xl:text-pretty`}
+            className={`${barlow.className} mx-6 text-para-mobile text-light text-balance md:text-para-tablet md:max-w-[458px] xl:m-0 xl:text-para-desktop xl:text-pretty pc:min-h-[12rem]`}
           >
             {technology[techIndex(i)].desc}
           </p>
