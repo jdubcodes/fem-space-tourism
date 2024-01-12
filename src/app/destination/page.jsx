@@ -30,6 +30,7 @@ export default function page() {
               layout='responsive'
               width={400}
               height={400}
+              className='motion-safe:animate-spin-slow'
             />
           </div>
         </div>
