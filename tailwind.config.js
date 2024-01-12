@@ -182,6 +182,9 @@ module.exports = {
       scale: {
         6: '0.6',
       },
+      animation: {
+        'spin-slow': 'spin 120s linear infinite',
+      },
     },
   },
   plugins: [],
