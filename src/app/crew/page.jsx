@@ -34,7 +34,7 @@ export default function page() {
     } else if (member === 'Victor Glover') {
       return 'w-[220px] md:w-[433px] md:h-[532px] xl:w-[547px] xl:h-[643px]'
     } else {
-      return 'w-[220px] md:w-[540px] md:h-[532px] xl:w-[583px] xl:h-[603px]'
+      return 'w-[220px] md:w-[540px] md:h-[532px] xl:w-[583px] xl:h-[603px] xl:translate-y-2'
     }
   }
 
