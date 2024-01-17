@@ -183,7 +183,7 @@ module.exports = {
         6: '0.6',
       },
       animation: {
-        'spin-slow': 'spin 120s linear infinite',
+        'spin-slow': 'spin 100s linear infinite',
       },
     },
   },
