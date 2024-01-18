@@ -95,7 +95,7 @@ export default function Navbar() {
         {/* Nav desktop background */}
         <div className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline'>
           {/* accent line */}
-          <span className='w-[32.5rem] h-nav-line opacity-line bg-white hidden pc:inline z-20 absolute -translate-x-[32.75rem]'></span>
+          <span className='w-[32.5rem] h-nav-line opacity-line bg-white hidden xl:inline z-20 absolute -translate-x-[32.75rem]'></span>
         </div>
       </div>
     </header>
