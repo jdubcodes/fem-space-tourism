@@ -1,7 +1,19 @@
+'use client'
+
 import Link from 'next/link'
-import { barlowCondensed, barlow, bellefair } from '../../config/fonts'
+import { useRouter } from 'next/navigation'
+import { barlowCondensed, barlow, bellefair } from '../lib/config/fonts'
 
 export default function Home() {
+  const router = useRouter()
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    setTimeout(() => {
+      router.push('/destination')
+    }, 5000)
+  }
+
   return (
     <main
       className={`${barlowCondensed.className} p-home-short xs:p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
@@ -27,6 +39,7 @@ export default function Home() {
         </div>
         <Link
           href='/destination'
+          onClick={handleClick}
           className='justify-self-center self-end md:self-center xl:justify-self-end xl:self-end'
         >
           {/* explore button */}
