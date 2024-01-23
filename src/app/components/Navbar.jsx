@@ -4,12 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useRef, useLayoutEffect } from 'react'
-import { barlowCondensed } from '../../../config/fonts'
+import { barlowCondensed } from '../../lib/config/fonts'
 
 import { gsap } from 'gsap'
 
 import MobileButton from './MobileButton'
-import menuItems from '../../../config/menuItems'
+import menuItems from '../../lib/config/menuItems'
 
 export default function Navbar() {
   const pathname = usePathname()

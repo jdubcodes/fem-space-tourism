@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import crew from '../../../config/crew.js'
-import { crewIndex } from '../../../config/findIndex.js'
-import { barlowCondensed, barlow, bellefair } from '../../../config/fonts.js'
+import crew from '../../lib/config/crew.js'
+import { crewIndex } from '../../lib/config/findIndex.js'
+import { barlowCondensed, barlow, bellefair } from '../../lib/config/fonts.js'
 
 export default function page() {
   const [member, setMember] = useState('Douglas Hurley')

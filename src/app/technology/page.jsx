@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import technology from '../../../config/technology'
-import { techIndex } from '../../../config/findIndex'
-import { barlowCondensed, barlow, bellefair } from '../../../config/fonts'
-import { techImg } from '../../../config/techImages'
+import technology from '../../lib/config/technology'
+import { techIndex } from '../../lib/config/findIndex'
+import { barlowCondensed, barlow, bellefair } from '../../lib/config/fonts'
+import { techImg } from '../../lib/config/techImages'
 
 export default function page() {
   const [i, setI] = useState('1')

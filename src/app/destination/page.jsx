@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import destinations from '../../../config/destinations'
-import { destIndex } from '../../../config/findIndex'
-import { barlowCondensed, barlow, bellefair } from '../../../config/fonts'
+import destinations from '../../lib/config/destinations'
+import { destIndex } from '../../lib/config/findIndex'
+import { barlowCondensed, barlow, bellefair } from '../../lib/config/fonts'
 
 export default function page() {
   const [dest, setDest] = useState('Moon')
