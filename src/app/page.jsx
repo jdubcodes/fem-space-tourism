@@ -2,17 +2,35 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
+import { useRef } from 'react'
+import { useGSAP } from '@gsap/react'
+import { gsap } from '@/lib/gsap/gsapConfig.jsx'
 import { barlowCondensed, barlow, bellefair } from '../lib/config/fonts'
 
 export default function Home() {
   const router = useRouter()
+  const tl = useRef()
+  const paraRef1 = useRef()
+  const paraRef2 = useRef()
+  const spanRef = useRef()
 
-  const handleClick = (e) => {
+  const delayRoute = (e) => {
     e.preventDefault()
     setTimeout(() => {
       router.push('/destination')
-    }, 5000)
+    }, 3000)
   }
+
+  useGSAP(() => {
+    gsap.to(paraRef1.current, {
+      opacity: 1,
+      duration: 10,
+    })
+    gsap.to(spanRef.current, {
+      opacity: 1,
+      duration: 5,
+    })
+  })
 
   return (
     <main
@@ -20,15 +38,20 @@ export default function Home() {
     >
       <div className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
         <div className='flex flex-col gap-2 self-end sm:gap-4 md:self-center xl:self-end xl:pr-20'>
-          <p className='text-sub-mobile sm:text-sub-tablet lg:text-sub-desktop text-light uppercase'>
+          <p
+            ref={paraRef1}
+            className='text-sub-mobile sm:text-sub-tablet lg:text-sub-desktop text-light uppercase opacity-0'
+          >
             So, you want to travel to
           </p>
           <span
+            ref={spanRef}
             className={`${bellefair.className} text-accent1-mobile sm:text-[6.75rem] md:text-accent1-tablet text-white uppercase`}
           >
             Space
           </span>
           <p
+            ref={paraRef2}
             className={`${barlow.className} max-w-md self-center text-para-mobile text-light text-balance sm:text-para-tablet md:max-w-xl lg:text-para-desktop`}
           >
             Let’s face it; if you want to go to space, you might as well
@@ -39,7 +62,7 @@ export default function Home() {
         </div>
         <Link
           href='/destination'
-          onClick={handleClick}
+          onClick={delayRoute}
           className='justify-self-center self-end md:self-center xl:justify-self-end xl:self-end'
         >
           {/* explore button */}
