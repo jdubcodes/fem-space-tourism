@@ -3,7 +3,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useRef, useLayoutEffect } from 'react'
+import { useState, useRef } from 'react'
+import { useGSAP } from '@gsap/react'
 import { barlowCondensed } from '../../lib/config/fonts'
 
 import { gsap } from 'gsap'
@@ -16,15 +17,37 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navRef = useRef()
+  const lineRef = useRef()
+  const bgRef = useRef()
+  const menuRef = useRef()
   const tl = useRef()
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
+    gsap.to(lineRef.current, {
+      x: '-33.75rem',
+      opacity: '0.2515',
+      duration: 2,
+      delay: 0.75,
+      ease: 'power4.easeInOut',
+    })
+    gsap.to(bgRef.current, {
+      opacity: 1,
+      duration: 1.75,
+      ease: 'power4.easeinOut',
+    })
+    gsap.to(menuRef.current, {
+      opacity: 1,
+      duration: 2,
+      delay: 1.75,
+      ease: 'power4.easeinOut',
+    })
+
     const ctx = gsap.context((self) => {
       const nav = self.selector(navRef.current)
       tl.current = gsap.timeline().to(nav, { x: 0 }).reverse()
     }, navRef)
     return () => ctx.revert()
-  }, [])
+  })
 
   const handleClick = () => {
     tl.current.reversed(!tl.current.reversed())
@@ -69,7 +92,10 @@ export default function Navbar() {
       {/* desktop menu */}
       <div className='pt-nav-tablet w-full hidden z-20 absolute md:inline xl:p-nav-lg pc:p-nav-desktop'>
         <div className='ml-auto flex items-center justify-end max-w-container xl:mx-auto'>
-          <nav className='px-12 py-[2.063rem] max-xl:nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0'>
+          <nav
+            ref={menuRef}
+            className='px-12 py-[2.063rem] max-xl:nav-bg tab:px-14 lg:px-[3.75rem] xl:p-0 opacity-0'
+          >
             <ul className='flex gap-7 text-nav lg:gap-10'>
               {menuItems.map((item, index) => (
                 <li key={index}>
@@ -93,9 +119,15 @@ export default function Navbar() {
         </div>
 
         {/* Nav desktop background */}
-        <div className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline'>
+        <div
+          ref={bgRef}
+          className='hidden w-[55vw] p-[2.813rem] absolute right-0 top-[1.875rem] nav-bg z-[-1] xl:inline opacity-0'
+        >
           {/* accent line */}
-          <span className='w-[32.5rem] h-nav-line opacity-line bg-white hidden xl:inline z-20 absolute -translate-x-[32.75rem]'></span>
+          <span
+            ref={lineRef}
+            className='w-[32.5rem] h-nav-line bg-white hidden xl:inline z-20 absolute -translate-x-[39.75rem] opacity-0'
+          ></span>
         </div>
       </div>
     </header>
