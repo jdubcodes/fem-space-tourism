@@ -10,9 +10,9 @@ import { barlowCondensed, barlow, bellefair } from '../lib/config/fonts'
 export default function Home() {
   const router = useRouter()
   const tl = useRef()
-  const paraRef1 = useRef()
-  const paraRef2 = useRef()
-  const spanRef = useRef()
+  const mainRef = useRef()
+  const loadRef = useRef()
+  const textRef1 = useRef()
 
   const delayRoute = (e) => {
     e.preventDefault()
@@ -21,37 +21,69 @@ export default function Home() {
     }, 3000)
   }
 
-  useGSAP(() => {
-    gsap.to(paraRef1.current, {
-      opacity: 1,
-      duration: 10,
-    })
-    gsap.to(spanRef.current, {
-      opacity: 1,
-      duration: 5,
-    })
-  })
+  useGSAP(
+    () => {
+      tl.current = gsap
+        .timeline()
+        .to(textRef1.current, {
+          opacity: 0.2,
+          duration: 4,
+          ease: 'power4.inOut',
+        })
+        // .to(
+        //   loadTextRef.current,
+        //   {
+        //     scale: 1.2,
+        //     duration: 6,
+        //     ease: 'power1.inOut',
+        //   },
+        //   '-=2'
+        // )
+        .to(
+          loadRef.current,
+          {
+            xPercent: 100,
+            duration: 2,
+            ease: 'power1.inOut',
+          },
+          '-=1'
+        )
+      // gsap.to(mainRef.current, {
+      //   opacity: 1,
+      //   duration: 1.5,
+      //   ease: 'power1.inOut',
+      // })
+    },
+    { scope: tl }
+  )
 
   return (
     <main
-      className={`${barlowCondensed.className} p-home-short xs:p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center`}
+      className={`${barlowCondensed.className} p-home-short xs:p-home-mobile sm:p-home-tablet lg:p-home-desktop h-screen w-screen bg-home-mobile md:bg-home-tablet lg:bg-home-desktop bg-cover bg-center overflow-hidden`}
     >
-      <div className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'>
+      <section
+        ref={loadRef}
+        id='transistion'
+        className={`${bellefair.className} w-screen h-screen fixed bottom-0 left-0 bg-dark flex items-center justify-center overflow-hidden origin-center z-50`}
+      >
+        <p ref={textRef1} className='text-[20vw] uppercase opacity-0 scale-90'>
+          Explore
+        </p>
+      </section>
+      <section
+        ref={mainRef}
+        className='mx-auto h-full w-full max-w-container grid grid-cols-1 text-center lg:gap-12 xl:gap-0 xl:grid-cols-2 xl:place-items-end xl:text-left'
+      >
         <div className='flex flex-col gap-2 self-end sm:gap-4 md:self-center xl:self-end xl:pr-20'>
-          <p
-            ref={paraRef1}
-            className='text-sub-mobile sm:text-sub-tablet lg:text-sub-desktop text-light uppercase opacity-0'
-          >
+          <p className='text-sub-mobile sm:text-sub-tablet lg:text-sub-desktop text-light uppercase'>
             So, you want to travel to
           </p>
           <span
-            ref={spanRef}
             className={`${bellefair.className} text-accent1-mobile sm:text-[6.75rem] md:text-accent1-tablet text-white uppercase`}
           >
             Space
           </span>
           <p
-            ref={paraRef2}
             className={`${barlow.className} max-w-md self-center text-para-mobile text-light text-balance sm:text-para-tablet md:max-w-xl lg:text-para-desktop`}
           >
             Let’s face it; if you want to go to space, you might as well
@@ -74,7 +106,7 @@ export default function Home() {
             <span className='absolute btn-mobile md:btn-tablet xl:btn-desktop opacity-0 bg-white rounded-full hover:btn-hover-mobile md:hover:btn-hover-tablet xl:hover:btn-hover-desktop hover:opacity-btn duration-700 origin-center ease-in-out'></span>
           </div>
         </Link>
-      </div>
+      </section>
     </main>
   )
 }

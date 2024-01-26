@@ -26,19 +26,18 @@ export default function Navbar() {
     gsap.to(lineRef.current, {
       x: '-33.75rem',
       opacity: '0.2515',
-      duration: 2,
-      delay: 0.75,
+      duration: 0.75,
       ease: 'power4.easeInOut',
     })
     gsap.to(bgRef.current, {
       opacity: 1,
-      duration: 1.75,
+      duration: 1.5,
       ease: 'power4.easeinOut',
     })
     gsap.to(menuRef.current, {
       opacity: 1,
-      duration: 2,
-      delay: 1.75,
+      duration: 1.55,
+      delay: 0.75,
       ease: 'power4.easeinOut',
     })
 
@@ -68,8 +67,8 @@ export default function Navbar() {
         <MobileButton handleClick={handleClick} isOpen={isOpen} />
         {/* mobile background */}
         <div
-          className='h-screen p-12 nav-bg translate-x-60 fixed right-0 z-10'
           ref={navRef}
+          className='h-screen p-12 nav-bg translate-x-60 fixed right-0 z-10'
         >
           <nav className='pt-28'>
             <ul className='flex flex-col gap-8 text-nav uppercase'>
